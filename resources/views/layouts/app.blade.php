@@ -3,7 +3,7 @@
 <head>
     <!-- Basic -->
     <meta charset="utf-8">
-    <title@yield('title')</title>
+    <title>@yield('title')</title>
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="SportsCup - Bootstrap 4 Theme for Soccer And Sports">
     <meta name="author" content="iwthemes.com">
@@ -11,7 +11,10 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Theme CSS -->
-    <link href="{{asset('css/main.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url('css/main.css')}}" rel="stylesheet" media="screen">
+
+    <!-- ICON -->
+    <link rel="icon" href="{{asset('img/icon.png')}}">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/icons/favicon.ico">
@@ -36,15 +39,15 @@
 
 <!-- ======================= JQuery libs =========================== -->
 <!-- jQuery local-->
-<script type="text/javascript" src="{{asset('js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{url('js/jquery.js')}}" defer></script>
 <!-- popper.js-->
-<script type="text/javascript" src="{{asset('js/popper.min.js')}}"></script>
+<script type="text/javascript" src="{{url('js/popper.min.js')}}" defer></script>
 <!-- bootstrap.min.js-->
-<script type="text/javascript" src="{{asset('js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url('js/bootstrap.min.js')}}"defer></script>
 <!-- required-scripts.js-->
-<script type="text/javascript" src="{{asset('js/theme-scripts.js')}}"></script>
+<script type="text/javascript" src="{{url('js/theme-scripts.js')}}"defer></script>
 <!-- theme-main.js-->
-<script type="text/javascript" src="{{asset('js/theme-main.js')}}"></script>
+<script type="text/javascript" src="{{url('js/theme-main.js')}}"defer></script>
 <!-- ======================= End JQuery libs =========================== -->
 
 </body>
