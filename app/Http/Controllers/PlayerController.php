@@ -22,7 +22,7 @@ class PlayerController extends Controller
     /**
     * Show number of results
     */
-    public function showcount($count)
+    public function show_count($count)
     {
         $players = Player::orderBy('score', 'desc')->take($count)->get();
 

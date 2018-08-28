@@ -19,6 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('countries', 'CountryController@index');
 
-Route::get('countriescount/{count}', 'CountryController@showcount');
-Route::get('playerscount/{count}', 'PlayerController@showcount');
+Route::get('countriescount/{count}', 'CountryController@show_count');
+Route::get('playerscount/{count}', 'PlayerController@show_count');
+
+
+Route::get('eventscount/{count}', 'EventController@show_count');
+
+
 

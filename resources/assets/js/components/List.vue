@@ -41,6 +41,32 @@
                 </div>
             </div>
         </div>
+
+
+        <ul v-if="this.database === 'events'">
+            <li>
+                <span class="head">
+                    Portugal Vs Spain <span
+                        class="date">27 Jun 2017</span>
+                </span>
+
+                <div class="goals-result">
+                    <a href="single-team.html">
+                        <img src="img/flags/por.png" alt="">
+                        Portugal
+                    </a>
+
+                    <span class="goals">
+                        <b>2</b> - <b>3</b>
+                    </span>
+
+                    <a href="single-team.html">
+                        <img src="img/flags/esp.png" alt="">
+                        Spain
+                    </a>
+                </div>
+            </li>
+        </ul>
     </div>
 </template>
 

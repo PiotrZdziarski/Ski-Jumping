@@ -47804,7 +47804,7 @@ exports = module.exports = __webpack_require__(13)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -47850,6 +47850,32 @@ module.exports = function listToStyles (parentId, list) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -48044,10 +48070,42 @@ var render = function() {
             )
           })
         )
-      : _vm._e()
+      : _vm._e(),
+    _vm._v(" "),
+    this.database === "events" ? _c("ul", [_vm._m(0)]) : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("li", [
+      _c("span", { staticClass: "head" }, [
+        _vm._v("\n                Portugal Vs Spain "),
+        _c("span", { staticClass: "date" }, [_vm._v("27 Jun 2017")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "goals-result" }, [
+        _c("a", { attrs: { href: "single-team.html" } }, [
+          _c("img", { attrs: { src: "img/flags/por.png", alt: "" } }),
+          _vm._v("\n                    Portugal\n                ")
+        ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "goals" }, [
+          _c("b", [_vm._v("2")]),
+          _vm._v(" - "),
+          _c("b", [_vm._v("3")])
+        ]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "single-team.html" } }, [
+          _c("img", { attrs: { src: "img/flags/esp.png", alt: "" } }),
+          _vm._v("\n                    Spain\n                ")
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

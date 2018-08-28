@@ -24,7 +24,7 @@ class CountryController extends Controller
     /**
      * Show number of results
      */
-    public function showcount($count)
+    public function show_count($count)
     {
         $countries = Country::orderBy('score', 'desc')->take($count)->get();
 

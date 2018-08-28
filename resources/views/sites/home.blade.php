@@ -99,76 +99,7 @@
                                         <div class="recent-results">
                                             <h5><a href="group-list.html">Recent Result</a></h5>
                                             <div class="info-results">
-                                                <ul>
-                                                    <li>
-                                                                <span class="head">
-                                                                    Portugal Vs Spain <span
-                                                                            class="date">27 Jun 2017</span>
-                                                                </span>
-
-                                                        <div class="goals-result">
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/por.png" alt="">
-                                                                Portugal
-                                                            </a>
-
-                                                            <span class="goals">
-                                                                        <b>2</b> - <b>3</b>
-                                                                    </span>
-
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/esp.png" alt="">
-                                                                Spain
-                                                            </a>
-                                                        </div>
-                                                    </li>
-
-                                                    <li>
-                                                                <span class="head">
-                                                                    Rusia Vs Colombia <span
-                                                                            class="date">30 Jun 2017</span>
-                                                                </span>
-
-                                                        <div class="goals-result">
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/rusia.png" alt="">
-                                                                Rusia
-                                                            </a>
-
-                                                            <span class="goals">
-                                                                        <b>2</b> - <b>3</b>
-                                                                    </span>
-
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/colombia.png" alt="">
-                                                                Colombia
-                                                            </a>
-                                                        </div>
-                                                    </li>
-
-                                                    <li>
-                                                                <span class="head">
-                                                                    Uruguay Vs Portugal <span
-                                                                            class="date">31 Jun 2017</span>
-                                                                </span>
-
-                                                        <div class="goals-result">
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/uru.png" alt="">
-                                                                Uruguay
-                                                            </a>
-
-                                                            <span class="goals">
-                                                                        <b>2</b> - <b>3</b>
-                                                                    </span>
-
-                                                            <a href="single-team.html">
-                                                                <img src="img/flags/por.png" alt="">
-                                                                Portugal
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
+                                                <list database="events"  api_link="@php echo getenv('APP_URL').'/api/countriescount/8' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
