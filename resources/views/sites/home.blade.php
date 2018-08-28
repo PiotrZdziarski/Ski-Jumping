@@ -73,7 +73,6 @@
                         <!-- Nav Tabs -->
                         <ul class="nav nav-tabs" id="myTab">
                             <li class="active"><a href="#statistics" data-toggle="tab">STATISTICS</a></li>
-                            <li><a href="#groups" data-toggle="tab">GROUPS</a></li>
                             <li><a href="#description" data-toggle="tab">DESCRIPTION</a></li>
                         </ul>
                         <!-- End Nav Tabs -->
@@ -88,7 +87,8 @@
                                         <div class="club-ranking">
                                             <h5><a href="group-list.html">Nations Cup</a></h5>
                                             <div class="info-ranking">
-                                                <list database="countries"  api_link="@php echo getenv('APP_URL').'/api/countriescount/8' @endphp"></list>
+                                                <list database="countries"
+                                                      api_link="@php echo getenv('APP_URL').'/api/countriescount/8' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
@@ -99,7 +99,8 @@
                                         <div class="recent-results">
                                             <h5><a href="group-list.html">Recent Result</a></h5>
                                             <div class="info-results">
-                                                <list database="events"  api_link="@php echo getenv('APP_URL').'/api/countriescount/8' @endphp"></list>
+                                                <list database="events"
+                                                      api_link="@php echo getenv('APP_URL').'/api/eventscount/3' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +111,8 @@
                                         <div class="player-ranking">
                                             <h5><a href="group-list.html">Individual</a></h5>
                                             <div class="info-player">
-                                                <list database="players"  api_link="@php echo getenv('APP_URL').'/api/playerscount/8' @endphp"></list>
+                                                <list database="players"
+                                                      api_link="@php echo getenv('APP_URL').'/api/playerscount/8' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
@@ -118,295 +120,6 @@
                                 </div>
                             </div>
                             <!-- Tab Theree - statistics -->
-
-                            <!-- Tab One - Groups List -->
-                            <div class="tab-pane" id="groups">
-                                <div class="groups-list">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="groups.html">GROUP A</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/rusia.png" alt="">
-                                                            Russia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/arabia.png" alt="">
-                                                            Saudi Arabia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/egy.png" alt="">
-                                                            Egypt
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/uru.png" alt="">
-                                                            Uruguay
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="groups.html">GROUP B</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/por.png" alt="">
-                                                            Portugal
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/esp.png" alt="">
-                                                            Spain
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/mar.png" alt="">
-                                                            Morocco
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/irn.png" alt="">
-                                                            IR Iran
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list.html">GROUP C</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/fra.png" alt="">
-                                                            France
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/aus.png" alt="">
-                                                            Australia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/per.png" alt="">
-                                                            Peru
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/den.png" alt="">
-                                                            Denmark
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list.html">GROUP D</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/arg.png" alt="">
-                                                            Argentina
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/isl.png" alt="">
-                                                            Iceland
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/cro.png" alt="">
-                                                            Croatia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/nga.png" alt="">
-                                                            Nigeria
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list-html">GROUP E</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/bra.png" alt="">
-                                                            Brazil
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/sui.png" alt="">
-                                                            Switzerland
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/costa-rica.png" alt="">
-                                                            Costa rica
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/srb.png" alt="">
-                                                            Serbia
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list-html">GROUP F</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/ger.png" alt="">
-                                                            Germany
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/mex.png" alt="">
-                                                            Mexico
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/swe.png" alt="">
-                                                            Sweden
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/kor.png" alt="">
-                                                            Korea Rep
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list-html">GROUP G</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/bel.png" alt="">
-                                                            Belgium
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/pan.png" alt="">
-                                                            Panama
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/tun.png" alt="">
-                                                            Tunisia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/eng.png" alt="">
-                                                            England
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-3 col-md-6">
-                                            <h5><a href="group-list-html">GROUP H</a></h5>
-                                            <div class="item-group">
-                                                <ul>
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/pol.png" alt="">
-                                                            Poland
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/sen.png" alt="">
-                                                            Senegal
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/colombia.png" alt="">
-                                                            Colombia
-                                                        </a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a href="single-team.html">
-                                                            <img src="img/flags/japan.png" alt="">
-                                                            Japan
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- End Tab One - Groups List -->
 
                             <!-- Tab Two - Destinations -->
@@ -414,24 +127,19 @@
                                 <div class="info-general">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="img/locations/1.jpg" alt="">
+                                            <img src="img/locations/fiscup.jpg" alt="">
                                         </div>
 
                                         <div class="col-md-8">
-                                            <h3>2018 FIFA World Cup</h3>
-                                            <p class="lead">The 2018 FIFA World Cup will be the 21st FIFA World Cup, a
-                                                quadrennial international football tournament contested by the men's
-                                                national teams. West of the Ural Mountains to keep travel time
-                                                manageable.</p>
+                                            <h3>FIS Cup 2017/2018</h3>
+                                            <p class="lead">
+                                                The 39th season of the Men's World Cup in ski jumping. In the schedule, which was approved in May 2017 at the FIS congress in Portorož, there were 23 individual competitions (including 5 in ski flights) and 8 team competitions (including 2 in ski flights).
+
+                                            </p>
                                         </div>
 
                                         <div class="col-md-12">
-                                            <p>It is scheduled to take place in Russia from 14 June to 15 July 2018,[2]
-                                                after the country was awarded the hosting rights on 2 December 2010.
-                                                This will be the first World Cup held in Europe since 2006; all but one
-                                                of the stadium venues are in European Russia, west of the Ural Mountains
-                                                to keep travel time manageable.</p>
-                                            <h4>Gianni Infantino - Fifa President</h4>
+                                            <p>It started on November 18 2017 on the hill Adam Malysz in Wisła, and ended March 25, 2018 at Letalnica in Slovenian Planica. In the framework of the World Cup 2017/2018 for the first time plans for Willingen Five and Planica 7 were planned. In addition, the rules tested during the Summer Grand Prix were introduced for the first time, according to which all competitors are required to take part in qualifying and take place there among the top 50 jumpers (40 in the case of ski flying competition). The jumpers taking the place in the top ten of the general classification of the World Cup thus lost their starting position in the main competition.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -580,7 +288,8 @@
                             <h4>Best Ski Jumpers</h4>
                         </div>
 
-                        <list type_name="card" database="players" api_link="@php echo getenv('APP_URL').'/api/playerscount/6' @endphp"></list>
+                        <list type_name="card" database="players"
+                              api_link="@php echo getenv('APP_URL').'/api/playerscount/6' @endphp"></list>
                     </div>
                     <!-- End Experts -->
                 </div>
@@ -670,76 +379,13 @@
                     <!-- Diary -->
                     <div class="panel-box">
                         <div class="titles">
-                            <h4><i class="fa fa-calendar"></i>Diary</h4>
+                            <h4><i class="fa fa-calendar"></i>Events</h4>
                         </div>
 
-                        <!-- List Diary -->
                         <ul class="list-diary">
-                            <!-- Item List Diary -->
-                            <li>
-                                <h6>GROUP A <span>14 JUN 2018 - 18:00</span></h6>
-                                <ul class="club-logo">
-                                    <li>
-                                        <img src="img/flags/rusia.png" alt="">
-                                        <span>RUSSIA</span>
-                                    </li>
-                                    <li>
-                                        <img src="img/flags/arabia.png" alt="">
-                                        <span>SAUDI ARABIA</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Item List Diary -->
-
-                            <!-- Item List Diary -->
-                            <li>
-                                <h6>GROUP E <span>22 JUN 2018 - 15:00</span></h6>
-                                <ul class="club-logo">
-                                    <li>
-                                        <img src="img/flags/bra.png" alt="">
-                                        <span>BRAZIL</span>
-                                    </li>
-                                    <li>
-                                        <img src="img/flags/costa-rica.png" alt="">
-                                        <span>COSTA RICA</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Item List Diary -->
-
-                            <!-- Item List Diary -->
-                            <li>
-                                <h6>GROUP H <span>19 JUN 2018 - 15:00</span></h6>
-                                <ul class="club-logo">
-                                    <li>
-                                        <img src="img/flags/colombia.png" alt="">
-                                        <span>COLOMBIA</span>
-                                    </li>
-                                    <li>
-                                        <img src="img/flags/japan.png" alt="">
-                                        <span>JAPAN</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Item List Diary -->
-
-                            <!-- Item List Diary -->
-                            <li>
-                                <h6>GROUP C <span>16 JUN 2018 - 15:00</span></h6>
-                                <ul class="club-logo">
-                                    <li>
-                                        <img src="img/flags/fra.png" alt="">
-                                        <span>FRANCE</span>
-                                    </li>
-                                    <li>
-                                        <img src="img/flags/aus.png" alt="">
-                                        <span>AUSTRALIA</span>
-                                    </li>
-                                </ul>
-                            </li>
-                            <!-- End Item List Diary -->
+                            <list database="events" type_name="diary"
+                                  api_link="@php echo getenv('APP_URL').'/api/eventscount/3' @endphp"></list>
                         </ul>
-                        <!-- End List Diary -->
                     </div>
                     <!-- End Diary -->
 

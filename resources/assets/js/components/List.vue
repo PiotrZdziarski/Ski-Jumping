@@ -3,7 +3,7 @@
         <ul v-if="this.database === 'countries' && this.type_name !== 'card'">
             <li v-for="(record, index) in records">
               <span class="position">
-                  {{index + 1}}
+                  {{index + 10}}
               </span>
                 <a href="single-team.html">
                     <img :src="'img/flags' +'/' + record.country_image" :alt="record.country">
@@ -43,28 +43,33 @@
         </div>
 
 
-        <ul v-if="this.database === 'events'">
-            <li>
+        <ul v-if="this.database === 'events' && this.type_name !== 'diary'">
+            <li v-for="record in records">
                 <span class="head">
-                    Portugal Vs Spain <span
-                        class="date">27 Jun 2017</span>
+                    {{record.hill}}
+                    <span
+                            class="date">{{record.date}}</span>
                 </span>
 
                 <div class="goals-result">
                     <a href="single-team.html">
-                        <img src="img/flags/por.png" alt="">
-                        Portugal
-                    </a>
-
-                    <span class="goals">
-                        <b>2</b> - <b>3</b>
-                    </span>
-
-                    <a href="single-team.html">
-                        <img src="img/flags/esp.png" alt="">
-                        Spain
+                        <img :src="'img/hills/' + record.hill_image" :alt="record.hill">
+                        {{record.description}}
                     </a>
                 </div>
+            </li>
+        </ul>
+
+        <ul class="list-diary" v-if="this.database ==='events' && this.type_name ==='diary'">
+            <!-- Item List Diary -->
+            <li v-for="record in records">
+                <h6>{{record.hill}} <span>{{record.date}}</span></h6>
+                <ul class="club-logo">
+                    <li>
+                        <img class="image" :src="'img/hills/' + record.hill_image" :alt="record.hill_image">
+                        <span>{{record.description}}</span>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -95,18 +100,13 @@
             const self = this;
             axios.get('http://' + this.api_link).then(function (Response) {
                 self.records = Response.data.data;
-                /*self.records.sort(function (a, b) {
-                    var keyA = a.score;
-                    var keyB = b.score;
-
-                    if (keyA < keyB) return 1;
-                    if (keyA > keyB) return -1;
-                    return 0;
-                });*/
             });
         }
     }
 </script>
 <style scoped>
+    .image {
+        max-width: 90% !important;
+    }
 </style>
 

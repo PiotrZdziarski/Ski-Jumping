@@ -17,7 +17,6 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('List', require('./components/List.vue'));
-Vue.component('best_players', require('./components/best_players.vue'));
 
 const app = new Vue({
     el: '#layout'
