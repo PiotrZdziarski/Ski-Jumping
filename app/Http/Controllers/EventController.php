@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Event;
 use App\Hill;
 use App\Http\Resources\EventResource;
-use Symfony\Component\HttpFoundation\Response;
 
 class EventController extends Controller
 {

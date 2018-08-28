@@ -9,7 +9,11 @@ class SitesController extends Controller
 {
     public function index()
     {
-        $players = Player::paginate(8);
-        return view('sites.home', ['players' => $players]);
+        return view('sites.home');
+    }
+
+    public function news($id)
+    {
+        return view('sites.news', ['id' => $id]);
     }
 }

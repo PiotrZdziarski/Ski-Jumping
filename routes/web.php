@@ -13,8 +13,8 @@
 
 Route::get('/', ['uses' => 'SitesController@index']);
 
-Route::get('/hehexd', function () {
-    return view('hehexd');
-});
+Route::get('/news/{id}', ['uses' => 'SitesController@news']);
+
+
 
 

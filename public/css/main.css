@@ -17331,14 +17331,14 @@ footer .links-footer ul.columns {
 }
 
 /* line 1946, ../sass/main.scss */
-.testimonials blockquote > p:before {
+/*.testimonials blockquote > p:before {
   border: 14px solid #dedede;
   border-color: #dedede transparent transparent transparent;
   bottom: -28px;
   left: 25px;
 }
 
-/* line 1952, ../sass/main.scss */
+!* line 1952, ../sass/main.scss *!
 .testimonials blockquote > p:before {
   border: 11px solid #dedede;
   border-color: #dedede transparent transparent transparent;
@@ -17348,7 +17348,7 @@ footer .links-footer ul.columns {
   left: 28px;
   position: absolute;
   width: 0px;
-}
+}*/
 
 /* line 1962, ../sass/main.scss */
 .testimonials blockquote > img {
@@ -18141,7 +18141,7 @@ footer .links-footer ul.columns {
 /* line 2599, ../sass/main.scss */
 .list-diary {
   list-style: none;
-  padding: 0 0 40px 0;
+  padding: 0 0 20px 0;
 }
 /* line 2602, ../sass/main.scss */
 .list-diary li {
