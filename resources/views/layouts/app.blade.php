@@ -7,6 +7,7 @@
     <meta name="keywords" content="HTML5 Template" />
     <meta name="description" content="SportsCup - Bootstrap 4 Theme for Soccer And Sports">
     <meta name="author" content="iwthemes.com">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,6 +16,7 @@
 
     <!-- ICON -->
     <link rel="icon" href="{{asset('img/icon.png')}}">
+
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/icons/favicon.ico">
@@ -38,6 +40,8 @@
 <!-- End layout-->
 
 <!-- ======================= JQuery libs =========================== -->
+<!-- Vue and others-->
+<script type="text/javascript" src="{{url('js/app.js')}}" defer></script>
 <!-- jQuery local-->
 <script type="text/javascript" src="{{url('js/jquery.js')}}" defer></script>
 <!-- popper.js-->
@@ -47,7 +51,7 @@
 <!-- required-scripts.js-->
 <script type="text/javascript" src="{{url('js/theme-scripts.js')}}"defer></script>
 <!-- theme-main.js-->
-<script type="text/javascript" src="{{url('js/theme-main.js')}}"defer></script>
+<script type="text/javascript" src="{{asset('js/theme-main.js')}}" defer></script>
 <!-- ======================= End JQuery libs =========================== -->
 
 </body>

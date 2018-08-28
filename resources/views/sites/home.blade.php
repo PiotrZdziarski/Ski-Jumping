@@ -86,113 +86,9 @@
                                     <!-- Club Ranking -->
                                     <div class="col-lg-4">
                                         <div class="club-ranking">
-                                            <h5><a href="group-list.html">Club Ranking</a></h5>
+                                            <h5><a href="group-list.html">Nations Cup</a></h5>
                                             <div class="info-ranking">
-                                                <ul>
-                                                    <li>
-                                                              <span class="position">
-                                                                  1
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/rusia.png" alt="">
-                                                            Russia
-                                                        </a>
-                                                        <span class="points">
-                                                                    90
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  2
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/arabia.png" alt="">
-                                                            Saudi Arabia
-                                                        </a>
-                                                        <span class="points">
-                                                                    86
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  3
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/egy.png" alt="">
-                                                            Egypt
-                                                        </a>
-                                                        <span class="points">
-                                                                    84
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  4
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/uru.png" alt="">
-                                                            Uruguay
-                                                        </a>
-                                                        <span class="points">
-                                                                  70
-                                                               </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  5
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/por.png" alt="">
-                                                            Portugal
-                                                        </a>
-                                                        <span class="points">
-                                                                    67
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  6
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/esp.png" alt="">
-                                                            Spain
-                                                        </a>
-                                                        <span class="points">
-                                                                    60
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  55
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/mar.png" alt="">
-                                                            Morocco
-                                                        </a>
-                                                        <span class="points">
-                                                                    90
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  8
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/clubs-logos/irn.png" alt="">
-                                                            IR Iran
-                                                        </a>
-                                                        <span class="points">
-                                                                    53
-                                                                </span>
-                                                    </li>
-                                                </ul>
+                                                <list database="countries"  api_link="@php echo getenv('APP_URL').'/api/countriescount/8' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
@@ -212,7 +108,7 @@
 
                                                         <div class="goals-result">
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/por.png" alt="">
+                                                                <img src="img/flags/por.png" alt="">
                                                                 Portugal
                                                             </a>
 
@@ -221,7 +117,7 @@
                                                                     </span>
 
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/esp.png" alt="">
+                                                                <img src="img/flags/esp.png" alt="">
                                                                 Spain
                                                             </a>
                                                         </div>
@@ -235,7 +131,7 @@
 
                                                         <div class="goals-result">
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/rusia.png" alt="">
+                                                                <img src="img/flags/rusia.png" alt="">
                                                                 Rusia
                                                             </a>
 
@@ -244,7 +140,7 @@
                                                                     </span>
 
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/colombia.png" alt="">
+                                                                <img src="img/flags/colombia.png" alt="">
                                                                 Colombia
                                                             </a>
                                                         </div>
@@ -258,7 +154,7 @@
 
                                                         <div class="goals-result">
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/uru.png" alt="">
+                                                                <img src="img/flags/uru.png" alt="">
                                                                 Uruguay
                                                             </a>
 
@@ -267,7 +163,7 @@
                                                                     </span>
 
                                                             <a href="single-team.html">
-                                                                <img src="img/clubs-logos/por.png" alt="">
+                                                                <img src="img/flags/por.png" alt="">
                                                                 Portugal
                                                             </a>
                                                         </div>
@@ -281,113 +177,9 @@
                                     <!-- Top player -->
                                     <div class="col-lg-4">
                                         <div class="player-ranking">
-                                            <h5><a href="group-list.html">Top player</a></h5>
+                                            <h5><a href="group-list.html">Individual</a></h5>
                                             <div class="info-player">
-                                                <ul>
-                                                    <li>
-                                                              <span class="position">
-                                                                  1
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/1.jpg" alt="">
-                                                            Cristiano R.
-                                                        </a>
-                                                        <span class="points">
-                                                                    90
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  2
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/2.jpg" alt="">
-                                                            Lionel Messi
-                                                        </a>
-                                                        <span class="points">
-                                                                    88
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  3
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/3.jpg" alt="">
-                                                            Neymar
-                                                        </a>
-                                                        <span class="points">
-                                                                    86
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  4
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/4.jpg" alt="">
-                                                            Luis Suárez
-                                                        </a>
-                                                        <span class="points">
-                                                                  80
-                                                               </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  5
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/5.jpg" alt="">
-                                                            Gareth Bale
-                                                        </a>
-                                                        <span class="points">
-                                                                    76
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  6
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/6.jpg" alt="">
-                                                            Sergio Agüero
-                                                        </a>
-                                                        <span class="points">
-                                                                    74
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  7
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/2.jpg" alt="">
-                                                            Jamez R.
-                                                        </a>
-                                                        <span class="points">
-                                                                    70
-                                                                </span>
-                                                    </li>
-
-                                                    <li>
-                                                              <span class="position">
-                                                                  8
-                                                              </span>
-                                                        <a href="single-team.html">
-                                                            <img src="img/players/1.jpg" alt="">
-                                                            Falcao Garcia
-                                                        </a>
-                                                        <span class="points">
-                                                                    65
-                                                                </span>
-                                                    </li>
-                                                </ul>
+                                                <list database="players"  api_link="@php echo getenv('APP_URL').'/api/playerscount/8' @endphp"></list>
                                             </div>
                                         </div>
                                     </div>
@@ -406,28 +198,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/rusia.png" alt="">
+                                                            <img src="img/flags/rusia.png" alt="">
                                                             Russia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/arabia.png" alt="">
+                                                            <img src="img/flags/arabia.png" alt="">
                                                             Saudi Arabia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/egy.png" alt="">
+                                                            <img src="img/flags/egy.png" alt="">
                                                             Egypt
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/uru.png" alt="">
+                                                            <img src="img/flags/uru.png" alt="">
                                                             Uruguay
                                                         </a>
                                                     </li>
@@ -441,28 +233,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/por.png" alt="">
+                                                            <img src="img/flags/por.png" alt="">
                                                             Portugal
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/esp.png" alt="">
+                                                            <img src="img/flags/esp.png" alt="">
                                                             Spain
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/mar.png" alt="">
+                                                            <img src="img/flags/mar.png" alt="">
                                                             Morocco
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/irn.png" alt="">
+                                                            <img src="img/flags/irn.png" alt="">
                                                             IR Iran
                                                         </a>
                                                     </li>
@@ -476,28 +268,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/fra.png" alt="">
+                                                            <img src="img/flags/fra.png" alt="">
                                                             France
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/aus.png" alt="">
+                                                            <img src="img/flags/aus.png" alt="">
                                                             Australia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/per.png" alt="">
+                                                            <img src="img/flags/per.png" alt="">
                                                             Peru
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/den.png" alt="">
+                                                            <img src="img/flags/den.png" alt="">
                                                             Denmark
                                                         </a>
                                                     </li>
@@ -511,28 +303,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/arg.png" alt="">
+                                                            <img src="img/flags/arg.png" alt="">
                                                             Argentina
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/isl.png" alt="">
+                                                            <img src="img/flags/isl.png" alt="">
                                                             Iceland
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/cro.png" alt="">
+                                                            <img src="img/flags/cro.png" alt="">
                                                             Croatia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/nga.png" alt="">
+                                                            <img src="img/flags/nga.png" alt="">
                                                             Nigeria
                                                         </a>
                                                     </li>
@@ -548,28 +340,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/bra.png" alt="">
+                                                            <img src="img/flags/bra.png" alt="">
                                                             Brazil
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/sui.png" alt="">
+                                                            <img src="img/flags/sui.png" alt="">
                                                             Switzerland
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/costa-rica.png" alt="">
+                                                            <img src="img/flags/costa-rica.png" alt="">
                                                             Costa rica
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/srb.png" alt="">
+                                                            <img src="img/flags/srb.png" alt="">
                                                             Serbia
                                                         </a>
                                                     </li>
@@ -583,28 +375,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/ger.png" alt="">
+                                                            <img src="img/flags/ger.png" alt="">
                                                             Germany
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/mex.png" alt="">
+                                                            <img src="img/flags/mex.png" alt="">
                                                             Mexico
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/swe.png" alt="">
+                                                            <img src="img/flags/swe.png" alt="">
                                                             Sweden
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/kor.png" alt="">
+                                                            <img src="img/flags/kor.png" alt="">
                                                             Korea Rep
                                                         </a>
                                                     </li>
@@ -618,28 +410,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/bel.png" alt="">
+                                                            <img src="img/flags/bel.png" alt="">
                                                             Belgium
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/pan.png" alt="">
+                                                            <img src="img/flags/pan.png" alt="">
                                                             Panama
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/tun.png" alt="">
+                                                            <img src="img/flags/tun.png" alt="">
                                                             Tunisia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/eng.png" alt="">
+                                                            <img src="img/flags/eng.png" alt="">
                                                             England
                                                         </a>
                                                     </li>
@@ -653,28 +445,28 @@
                                                 <ul>
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/pol.png" alt="">
+                                                            <img src="img/flags/pol.png" alt="">
                                                             Poland
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/sen.png" alt="">
+                                                            <img src="img/flags/sen.png" alt="">
                                                             Senegal
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/colombia.png" alt="">
+                                                            <img src="img/flags/colombia.png" alt="">
                                                             Colombia
                                                         </a>
                                                     </li>
 
                                                     <li>
                                                         <a href="single-team.html">
-                                                            <img src="img/clubs-logos/japan.png" alt="">
+                                                            <img src="img/flags/japan.png" alt="">
                                                             Japan
                                                         </a>
                                                     </li>
@@ -723,7 +515,7 @@
                     <div class="col-xl-3 col-md-12">
                         <div class="counter-home-wraper">
                             <div class="title-color text-center">
-                                <h4>World Cup Russia 2018</h4>
+                                <h4>FIS Cup 2018/2019</h4>
                             </div>
 
                             <div class="content-counter content-counter-home">
@@ -733,37 +525,19 @@
                                 </p>
                                 <div id="event-one" class="counter"></div>
                                 <ul class="post-options">
-                                    <li><i class="fa fa-calendar"></i>14 June, 2018</li>
-                                    <li><i class="fa fa-clock-o"></i>Kick-of, 12:00 PM</li>
+                                    <li><i class="fa fa-calendar"></i>17 November, 2018</li>
+                                    <li><i class="fa fa-clock-o"></i>Kick-of, 4:00 PM</li>
                                 </ul>
 
                                 <div class="list-groups">
                                     <div class="row align-items-center">
 
                                         <div class="col-md-12">
-                                            <p>GROUP A, Luzhniki Stadium Moscow</p>
+                                            <h4>Adam Małysz Hill in Wisła, Poland</h4>
                                         </div>
 
-                                        <div class="col-md-5">
-                                            <img src="img/clubs-logos/rusia.png" alt="">
-                                            <span>RUSSIA</span>
-                                        </div>
-
-                                        <div class="col-md-2">
-                                            <div class="vs">Vs</div>
-                                        </div>
-
-                                        <div class="col-md-5">
-                                            <img src="img/clubs-logos/arabia.png" alt="">
-                                            <span>SAUDI ARABIA</span>
-                                        </div>
                                     </div>
                                 </div>
-
-                                <a class="btn btn-primary" href="#">
-                                    PURCHASE
-                                    <i class="fa fa-trophy"></i>
-                                </a>
                             </div>
                         </div>
                         <!-- Content Counter -->
@@ -872,60 +646,10 @@
                     <!-- Experts -->
                     <div class="panel-box">
                         <div class="titles">
-                            <h4>Best Players</h4>
+                            <h4>Best Ski Jumpers</h4>
                         </div>
 
-                        <div class="row">
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/1.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html">Cristiano Ronaldo</a></h6>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/2.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html">Lionel Messi</a></h6>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/3.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html">Neymar</a></h6>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/4.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html">Luis Suárez</a></h6>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/5.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html"> Gareth Bale</a></h6>
-                                </div>
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
-                                <div class="box-info">
-                                    <a href="single-player.html">
-                                        <img src="img/players/6.jpg" alt="" class="img-responsive">
-                                    </a>
-                                    <h6 class="entry-title"><a href="single-player.html">Sergio Agüero</a></h6>
-                                </div>
-                            </div>
-
-                        </div>
+                        <list type_name="card" database="players" api_link="@php echo getenv('APP_URL').'/api/playerscount/6' @endphp"></list>
                     </div>
                     <!-- End Experts -->
                 </div>
@@ -1025,11 +749,11 @@
                                 <h6>GROUP A <span>14 JUN 2018 - 18:00</span></h6>
                                 <ul class="club-logo">
                                     <li>
-                                        <img src="img/clubs-logos/rusia.png" alt="">
+                                        <img src="img/flags/rusia.png" alt="">
                                         <span>RUSSIA</span>
                                     </li>
                                     <li>
-                                        <img src="img/clubs-logos/arabia.png" alt="">
+                                        <img src="img/flags/arabia.png" alt="">
                                         <span>SAUDI ARABIA</span>
                                     </li>
                                 </ul>
@@ -1041,11 +765,11 @@
                                 <h6>GROUP E <span>22 JUN 2018 - 15:00</span></h6>
                                 <ul class="club-logo">
                                     <li>
-                                        <img src="img/clubs-logos/bra.png" alt="">
+                                        <img src="img/flags/bra.png" alt="">
                                         <span>BRAZIL</span>
                                     </li>
                                     <li>
-                                        <img src="img/clubs-logos/costa-rica.png" alt="">
+                                        <img src="img/flags/costa-rica.png" alt="">
                                         <span>COSTA RICA</span>
                                     </li>
                                 </ul>
@@ -1057,11 +781,11 @@
                                 <h6>GROUP H <span>19 JUN 2018 - 15:00</span></h6>
                                 <ul class="club-logo">
                                     <li>
-                                        <img src="img/clubs-logos/colombia.png" alt="">
+                                        <img src="img/flags/colombia.png" alt="">
                                         <span>COLOMBIA</span>
                                     </li>
                                     <li>
-                                        <img src="img/clubs-logos/japan.png" alt="">
+                                        <img src="img/flags/japan.png" alt="">
                                         <span>JAPAN</span>
                                     </li>
                                 </ul>
@@ -1073,11 +797,11 @@
                                 <h6>GROUP C <span>16 JUN 2018 - 15:00</span></h6>
                                 <ul class="club-logo">
                                     <li>
-                                        <img src="img/clubs-logos/fra.png" alt="">
+                                        <img src="img/flags/fra.png" alt="">
                                         <span>FRANCE</span>
                                     </li>
                                     <li>
-                                        <img src="img/clubs-logos/aus.png" alt="">
+                                        <img src="img/flags/aus.png" alt="">
                                         <span>AUSTRALIA</span>
                                     </li>
                                 </ul>

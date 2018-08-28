@@ -130,7 +130,7 @@ $(document).ready(function($) {
 
     //=================================== Counter  ==============================//
 
-    $('#event-one').countdown('2018/12/14', function(event) {
+    $('#event-one').countdown('2018/11/17', function(event) {
       var $this = $(this).html(event.strftime(''
       + '<span>%D <br> <small>days</small></span>  '
       + '<span>%H <br> <small>hr</small> </span>  '

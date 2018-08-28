@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('countries', 'CountryController@index');
+
+Route::get('countriescount/{count}', 'CountryController@showcount');
+Route::get('playerscount/{count}', 'PlayerController@showcount');
+

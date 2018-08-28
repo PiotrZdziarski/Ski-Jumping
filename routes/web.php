@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('sites.home');
+Route::get('/', ['uses' => 'SitesController@index']);
+
+Route::get('/hehexd', function () {
+    return view('hehexd');
 });
+
+

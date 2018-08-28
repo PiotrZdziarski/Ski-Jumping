@@ -15487,6 +15487,19 @@ header .mobile-nav:hover {
     display: none;
   }
 }
+.sticky-wrapper {
+  height: 65px !important;
+}
+/*
+@media(min-width: 1200px) {
+  .sticky-wrapper{
+    height: 30px !important;
+  }
+}
+*/
+/*.sticky-wrapper {*/
+  /*display:none !important;*/
+/*}*/
 
 /* Header 2 --------------------------------------------------*/
 /* line 440, ../sass/main.scss */
