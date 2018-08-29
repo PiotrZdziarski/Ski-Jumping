@@ -7,8 +7,8 @@
                 <!-- Logo-->
                 <div class="col">
                     <div class="logo">
-                        <a href="index.html" title="Return Home">
-                            <img src="img/logo.png" alt="Logo" class="logo_img">
+                        <a href="{{url('/')}}" title="Return Home">
+                            <img src="{{asset('img/logo.png')}}" alt="Logo" class="logo_img">
                         </a>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                 <div class="col">
                     <div class="adds">
                         <a href="http://themeforest.net/user/iwthemes/portfolio?ref=iwthemes" target="_blank">
-                            <img src="img/adds/banner.jpg" alt="" class="img-responsive">
+                            <img src="{{asset('img/adds/banner.jpg')}}" alt="" class="img-responsive">
                         </a>
                     </div>
 

@@ -206,92 +206,7 @@
                 <!-- content Column Left -->
                 <div class="col-lg-6 col-xl-7">
                     <!-- Recent Post -->
-                    <div class="panel-box">
-
-                        <div class="titles">
-                            <h4>Recent News</h4>
-                        </div>
-
-                        <!-- Post Item -->
-                        <div class="post-item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="img-hover">
-                                        <img src="img/blog/1.jpg" alt="" class="img-responsive">
-                                        <div class="overlay"><a href="single-news.html">+</a></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h5><a href="single-news.html">Group Stage Breakdown</a></h5>
-                                    <span class="data-info">January 3, 2014  / <i class="fa fa-comments"></i><a
-                                                href="#">0</a></span>
-                                    <p>While familiar with fellow European nation France, Hareide admits that South
-                                        American side Peru.<a href="single-news.html">Read More [+]</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Post Item -->
-
-                        <!-- Post Item -->
-                        <div class="post-item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="img-hover">
-                                        <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                        <div class="overlay"><a href="single-news.html">+</a></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h5><a href="single-news.html">Russia 2018’s potential classic match-ups</a></h5>
-                                    <span class="data-info">January 9, 2014  / <i class="fa fa-comments"></i><a
-                                                href="#">5</a></span>
-                                    <p>Our goal is very clear, it didn’t change after the draw. We should qualify for
-                                        the knockout stage.<a href="single-news.html">Read More [+]</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Post Item -->
-
-                        <!-- Post Item -->
-                        <div class="post-item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="img-hover">
-                                        <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                        <div class="overlay"><a href="single-news.html">+</a></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h5><a href="single-news.html">World Cup rivalries reprised</a></h5>
-                                    <span class="data-info">January  4, 2014  / <i class="fa fa-comments"></i><a
-                                                href="#">3</a></span>
-                                    <p>The outdoor exhibition on Manezhnaya Square comprises 11 figures that symbolise
-                                        the main sites of interest.<a href="single-news.html">Read More [+]</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Post Item -->
-
-                        <!-- Post Item -->
-                        <div class="post-item">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="img-hover">
-                                        <img src="img/blog/4.jpg" alt="" class="img-responsive">
-                                        <div class="overlay"><a href="single-news.html">+</a></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h5><a href="single-news.html">All set for your trip to Russia?</a></h5>
-                                    <span class="data-info">January 8, 2014  / <i class="fa fa-comments"></i><a
-                                                href="#">2</a></span>
-                                    <p>Colombia play Japan on 19 June at the Mordovia Arena, where the piling and
-                                        casting operations.<a href="single-news.html">Read More [+]</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Post Item -->
-                    </div>
+                    <recent-news api_link="@php echo getenv('APP_URL').'/api/newscount/4' @endphp"></recent-news>
                     <!-- End Recent Post -->
 
                     <!-- Experts -->
@@ -378,9 +293,13 @@
                     <!-- Widget img-->
                     <div class="panel-box">
                         <div class="titles no-margin">
-                            <h4>Season 2018/2019</h4>
+                            <a href="{{url('news/1')}}">
+                                <h4>Season 2018/2019</h4>
+                            </a>
                         </div>
-                        <img src="img/slide/1.jpg" alt="skoki">
+                        <a href="{{url('news/1')}}">
+                            <img src="{{asset('img/slide/1.jpg')}}" alt="skoki">
+                        </a>
                         <div class="row">
                             <div class="info-panel">
                                 <p>The autumn meeting of the activists of the International Ski Federation in Zurich

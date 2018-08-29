@@ -17,6 +17,10 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 Vue.component('List', require('./components/List.vue'));
+Vue.component('text-block', require('./components/text-block.vue'));
+Vue.component('image-vue', require('./components/image-vue.vue'));
+Vue.component('recent-news', require('./components/recent-news.vue'));
+Vue.component('news', require('./components/news.vue'));
 
 const app = new Vue({
     el: '#layout'

@@ -1,5 +1,5 @@
 <template>
-    <img :src="'img/slide/' + record.news_image">
+    <img id="image" class="w-100" :src="'../img/slide/' + record.news_image">
 </template>
 
 <script>

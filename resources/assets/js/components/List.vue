@@ -30,9 +30,8 @@
             </li>
         </ul>
 
-
         <div class="row" v-if="this.database === 'players' && this.type_name === 'card'">
-            <div v-for="(record,index) in records" class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
+            <div v-for="record in records" class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
                 <div class="box-info">
                     <a class="flexbox" href="single-player.html">
                         <img :src="'img/players/' + record.player_image" :alt="record.player" class="img-responsive">
@@ -76,7 +75,7 @@
 </template>
 
 <script>
-    import axios from 'axios';
+        import axios from 'axios';
 
     export default {
         name: "List",
