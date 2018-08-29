@@ -17,6 +17,9 @@
     <!-- ICON -->
     <link rel="icon" href="{{asset('img/icon.png')}}">
 
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700&amp;subset=latin-ext" rel="stylesheet">
+
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/icons/favicon.ico">

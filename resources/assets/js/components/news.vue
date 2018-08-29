@@ -42,7 +42,7 @@
                  for(let i = 1; i <= 3; i++) {
                      document.getElementById(i.toString()).classList.remove('display_none');
                  }
-            }, 1500)
+            }, 1300)
         }
     }
 </script>

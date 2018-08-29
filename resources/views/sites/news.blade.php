@@ -82,24 +82,8 @@
                             <h4>Comments</h4>
                         </div>
                         <!-- Title Post -->
-                        <ul class="testimonials">
-                            <li>
-                                <blockquote><p>Lionel Messi and Cristiano Ronaldo will come face to face for the first
-                                        time in the World Cup only if their two nations finish in the same position in
-                                        the group phase, either first or second.!.</p></blockquote>
-                            </li>
-                            <li>
-                                <blockquote><p>After two previous meetings on the big stage, it is honours even: Brazil
-                                        won the Final of Korea/Japan 2002 2-0, while Germany recorded that famous
-                                        victory at Brazil 2014!.</p></blockquote>
-                            </li>
-                            <li>
-                                <blockquote><p>To help fire your imagination and let you see if there is a potential
-                                        knockout match you might be tempted to buy tickets for, FIFA.com has come up
-                                        with a list of possible last-16 and quarter-final duels between some of the
-                                        game’s biggest attractions.!.</p></blockquote>
-                            </li>
-                        </ul>
+                        <list database="comments"
+                              api_link="@php echo getenv('APP_URL')."/api/comment_show/$id" @endphp"></list>
                     </div>
                     <!-- End Comments -->
 
@@ -114,21 +98,8 @@
                             <!-- Form coment -->
                             <form class="form-theme">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Your name *</label>
-                                        <input type="text" required="required" value="" maxlength="100"
-                                               class="form-control" name="name" id="name">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label>Your email address *</label>
-                                        <input type="email" required="required" value="" maxlength="100"
-                                               class="form-control" name="email" id="email">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <label>Comment *</label>
+                                    <div class="col-md-12" style="margin-top: -20px;">
+                                        <label>Comment</label>
                                         <textarea maxlength="5000" rows="10" class="form-control" name="comment"
                                                   id="comment" style="height: 138px;" required="required"></textarea>
                                     </div>

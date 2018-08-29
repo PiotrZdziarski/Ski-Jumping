@@ -66,9 +66,17 @@
                 <ul class="club-logo">
                     <li>
                         <img class="image" :src="'img/hills/' + record.hill_image" :alt="record.hill_image">
-                        <span>{{record.description}}</span>
+                        <span class="post">{{record.description}}</span>
                     </li>
                 </ul>
+            </li>
+        </ul>
+
+        <ul v-if="this.database === 'comments'" class="testimonials">
+            <li v-for="record in records">
+                <blockquote>
+                    <p class="comment">{{record.description}}<a class="date_comment">{{record.date}}</a></p>
+                </blockquote>
             </li>
         </ul>
     </div>
@@ -104,6 +112,18 @@
     }
 </script>
 <style scoped>
+    .comment {
+        font-size: 16px;
+        font-family: "Maven Pro", sans-serif;
+        white-space: pre-line;
+    }
+    .date_comment {
+        display: block;
+        text-decoration: none;
+        font-style:normal;
+        margin-top: 15px;
+        font-size: 14px;
+    }
     .image {
         max-width: 90% !important;
     }

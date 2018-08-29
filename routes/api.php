@@ -31,5 +31,7 @@ Route::get('eventscount/{count}', 'EventController@show_count');
 Route::get('news_show/{id}', 'NewsController@show');
 Route::get('newscount/{coount}', 'NewsController@show_count');
 
+//comments
+Route::get('comment_show/{news_id}', 'CommentController@show');
 
 
