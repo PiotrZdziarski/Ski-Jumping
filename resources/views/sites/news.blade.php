@@ -75,7 +75,6 @@
                     <news api_link_component="@php echo getenv('APP_URL')."/api/news_show/$id" @endphp"></news>
                     <!-- End Content Text-->
 
-                    <!-- Comments -->
                     <div class="panel-box">
                         <!-- Title Post -->
                         <div class="titles">
@@ -96,20 +95,7 @@
 
                         <div class="info-panel">
                             <!-- Form coment -->
-                            <form class="form-theme">
-                                <div class="row">
-                                    <div class="col-md-12" style="margin-top: -20px;">
-                                        <label>Comment</label>
-                                        <textarea maxlength="5000" rows="10" class="form-control" name="comment"
-                                                  id="comment" style="height: 138px;" required="required"></textarea>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="submit" value="Post Comment" class="btn btn-primary">
-                                    </div>
-                                </div>
-                            </form>
+                            <form-comment api_link="@php echo getenv('APP_URL')."/api/comment_store/" @endphp" news_id="{{$id}}"></form-comment>
                             <!-- End Form coment -->
                         </div>
                     </div>

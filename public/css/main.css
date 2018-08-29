@@ -19177,3 +19177,6 @@ table.career tr td img {
 .display_none {
   display: none;
 }
+@media(max-width: 476px) {
+  .info-panel{padding: 5px !important;}
+}

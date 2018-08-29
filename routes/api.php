@@ -33,5 +33,6 @@ Route::get('newscount/{coount}', 'NewsController@show_count');
 
 //comments
 Route::get('comment_show/{news_id}', 'CommentController@show');
+Route::post('comment_store', 'CommentController@store');
 
 
