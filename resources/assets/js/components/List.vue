@@ -46,10 +46,8 @@
             <li v-for="record in records">
                 <span class="head">
                     {{record.hill}}
-                    <span
-                            class="date">{{record.date}}</span>
+                    <span class="date">{{record.date}}</span>
                 </span>
-
                 <div class="goals-result">
                     <a href="single-team.html">
                         <img :src="'img/hills/' + record.hill_image" :alt="record.hill">
@@ -72,7 +70,7 @@
             </li>
         </ul>
 
-        <ul v-if="this.database === 'comments'" class="testimonials">
+        <ul id="comments" v-if="this.database === 'comments'" class="testimonials">
             <li v-for="record in records">
                 <blockquote>
                     <p class="comment">{{record.description}}<a class="date_comment">{{record.date}}</a></p>
@@ -83,7 +81,7 @@
 </template>
 
 <script>
-        import axios from 'axios';
+    import axios from 'axios';
 
     export default {
         name: "List",
@@ -104,26 +102,32 @@
             };
         },
         mounted() {
-            const self = this;
+            const SELF = this;
             axios.get('http://' + this.api_link).then(function (Response) {
-                self.records = Response.data.data;
+                SELF.records = Response.data.data;
             });
         }
     }
 </script>
 <style scoped>
+    @media(max-width: 476px) {
+        .comment {padding: 15px;}
+    }
     .comment {
         font-size: 16px;
         font-family: "Maven Pro", sans-serif;
         white-space: pre-line;
     }
+
     .date_comment {
         display: block;
         text-decoration: none;
-        font-style:normal;
+        font-style: normal;
         margin-top: 15px;
-        font-size: 14px;
+        font-size: 12px;
+        white-space: nowrap !important;
     }
+
     .image {
         max-width: 90% !important;
     }

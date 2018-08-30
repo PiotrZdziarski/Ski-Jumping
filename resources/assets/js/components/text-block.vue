@@ -28,9 +28,9 @@
             }
         },
         mounted() {
-            const self = this;
+            const SELF = this;
             axios.get('http://' + this.api_link).then(function (Response) {
-                self.record = Response.data.data[0];
+                SELF.record = Response.data.data[0];
             });
         }
     }

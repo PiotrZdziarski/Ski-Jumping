@@ -17,6 +17,7 @@
 
 <script>
     import axios from 'axios';
+
     export default {
         name: "form-comment",
         props: {
@@ -32,7 +33,23 @@
                 axios.post('http://' + this.api_link, {
                     description: this.description,
                     news_id: this.news_id
-                });
+                }).then(function (response) {
+                    const TABLE = response.data.data;
+                    const element = document.getElementById('comments');
+
+                    element.innerHTML =
+                        '<li id="'+ TABLE.id  +'">' +
+                        '    <blockquote>' +
+                        '        <p class="comment">' + TABLE.description + '<a class="date_comment">' + TABLE.date +'</a></p>' +
+                        '    </blockquote>' +
+                        '</li>' + element.innerHTML;
+
+                    const added_comment = document.getElementById(TABLE.id.toString());
+                    added_comment.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    });
+
             }
         },
         data() {
@@ -43,6 +60,23 @@
     }
 </script>
 
-<style scoped>
-    .btn{font-family: "Maven Pro", sans-serif;}
+<style>
+    .btn {
+        font-family: "Maven Pro", sans-serif;
+    }
+
+    .comment {
+        font-size: 16px;
+        font-family: "Maven Pro", sans-serif;
+        white-space: pre-line;
+    }
+
+    .date_comment {
+        display: block;
+        text-decoration: none;
+        font-style: normal;
+        margin-top: 15px;
+        font-size: 12px;
+        white-space: nowrap !important;
+    }
 </style>

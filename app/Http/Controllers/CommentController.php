@@ -33,7 +33,7 @@ class CommentController extends Controller
         $comment = new Comment;
         $comment->description = $description;
         $comment->news_id = $news_id;
-        $comment->date = now();
+        $comment->date = date('Y-m-d H:i:s');
 
         if($comment->save()) {
             return new CommentsResource($comment);

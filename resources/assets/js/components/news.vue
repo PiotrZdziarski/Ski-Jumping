@@ -36,9 +36,9 @@
             }
         },
         mounted() {
-            const self = this;
+            const SELF = this;
             setTimeout(function(){
-                self.loading = false;
+                SELF.loading = false;
                  for(let i = 1; i <= 3; i++) {
                      document.getElementById(i.toString()).classList.remove('display_none');
                  }
