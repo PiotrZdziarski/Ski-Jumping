@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title')Ski Jumping @endsection
+@section('title'){{$title}}@endsection
 @section('content')
     <!-- Section Area - Content Central -->
     <section class="content-info">

@@ -48118,7 +48118,7 @@ var render = function() {
                 _vm._v("\n              " + _vm._s(index + 1) + "\n          ")
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "single-team.html" } }, [
+              _c("a", { attrs: { href: "player/" + record.id } }, [
                 _c("img", {
                   attrs: {
                     src: "img/players" + "/" + record.player_image,
@@ -48156,7 +48156,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "flexbox",
-                      attrs: { href: "single-player.html" }
+                      attrs: { href: "/player/" + record.id }
                     },
                     [
                       _c("img", {
@@ -48170,7 +48170,7 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("h6", { staticClass: "entry-title" }, [
-                    _c("a", { attrs: { href: "single-player.html" } }, [
+                    _c("a", { attrs: { href: "/player/" + record.id } }, [
                       _vm._v(_vm._s(record.player))
                     ])
                   ])
@@ -48313,7 +48313,7 @@ exports = module.exports = __webpack_require__(3)(false);
 
 
 // module
-exports.push([module.i, "\n.pre-line[data-v-7e30ea78]{white-space: pre-line\n}\n", ""]);
+exports.push([module.i, "\n.pre-line[data-v-7e30ea78]{white-space: pre-line\n}\n.slide-enter-active[data-v-7e30ea78] {\n    -webkit-transition: all .3s ease;\n    transition: all .3s ease;\n}\n.slide-leave-active[data-v-7e30ea78] {\n    -webkit-transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);\n}\n.slide-enter[data-v-7e30ea78], .slide-leave-to[data-v-7e30ea78]\n    /* .slide-fade-leave-active below version 2.1.8 */ {\n    -webkit-transform: translateX(10px);\n            transform: translateX(10px);\n    opacity: 0;\n}\n", ""]);
 
 // exports
 
@@ -48326,6 +48326,37 @@ exports.push([module.i, "\n.pre-line[data-v-7e30ea78]{white-space: pre-line\n}\n
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -48352,13 +48383,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data: function data() {
         return {
-            record: ''
+            record: '',
+            ready: false
         };
     },
     mounted: function mounted() {
         var SELF = this;
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
             SELF.record = Response.data.data[0];
+            SELF.ready = true;
         });
     }
 });
@@ -48371,17 +48404,81 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    this.row === "title"
-      ? _c("div", [_vm._v("\n        " + _vm._s(this.record.title) + "\n    ")])
-      : _vm._e(),
-    _vm._v(" "),
-    this.row === "description"
-      ? _c("div", { staticClass: "pre-line" }, [
-          _vm._v("\n        " + _vm._s(this.record.description) + "\n    ")
-        ])
-      : _vm._e()
-  ])
+  return _c(
+    "div",
+    [
+      _c("transition", { attrs: { name: "slide" } }, [
+        this.row === "title" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.title) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "description" && this.ready
+          ? _c("div", { staticClass: "pre-line" }, [
+              _vm._v(
+                "\n            " +
+                  _vm._s(this.record.description) +
+                  "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "player" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.player) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "age" && this.ready
+          ? _c("div", [
+              _vm._v("\n            " + _vm._s(this.record.age) + "\n        ")
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "wins" && this.ready
+          ? _c("div", [
+              _vm._v("\n            " + _vm._s(this.record.wins) + "\n        ")
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "country" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.country) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "weight" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.weight) + " kg\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "height" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.height) + " cm\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "born" && this.ready
+          ? _c("div", [
+              _vm._v("\n            " + _vm._s(this.record.born) + "\n        ")
+            ])
+          : _vm._e()
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -48945,13 +49042,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(80)
+  __webpack_require__(72)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(74)
 /* template */
-var __vue_template__ = __webpack_require__(82)
+var __vue_template__ = __webpack_require__(75)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -48990,8 +49087,46 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 72 */,
-/* 73 */,
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(73);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("e4ee4eec", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08988ced\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./form-comment.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08988ced\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./form-comment.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.btn {\n    font-family: \"Maven Pro\", sans-serif;\n}\n.comment {\n    font-size: 16px;\n    font-family: \"Maven Pro\", sans-serif;\n    white-space: pre-line;\n}\n.date_comment {\n    display: block;\n    text-decoration: none;\n    font-style: normal;\n    margin-top: 15px;\n    font-size: 12px;\n    white-space: nowrap !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
 /* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -49055,57 +49190,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 75 */,
-/* 76 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(81);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(4)("e4ee4eec", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08988ced\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./form-comment.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-08988ced\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./form-comment.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(3)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.btn {\n    font-family: \"Maven Pro\", sans-serif;\n}\n.comment {\n    font-size: 16px;\n    font-family: \"Maven Pro\", sans-serif;\n    white-space: pre-line;\n}\n.date_comment {\n    display: block;\n    text-decoration: none;\n    font-style: normal;\n    margin-top: 15px;\n    font-size: 12px;\n    white-space: nowrap !important;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 82 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -49186,6 +49271,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-08988ced", module.exports)
   }
 }
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

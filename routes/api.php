@@ -23,13 +23,14 @@ Route::get('countriescount/{count}', 'CountryController@show_count');
 
 //players
 Route::get('playerscount/{count}', 'PlayerController@show_count');
+Route::get('player_show/{id}', 'PlayerController@show');
 
 //events
 Route::get('eventscount/{count}', 'EventController@show_count');
 
 //news
 Route::get('news_show/{id}', 'NewsController@show');
-Route::get('newscount/{coount}', 'NewsController@show_count');
+Route::get('newscount/{count}', 'NewsController@show_count');
 
 //comments
 Route::get('comment_show/{news_id}', 'CommentController@show');

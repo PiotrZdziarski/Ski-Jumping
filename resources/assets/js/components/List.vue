@@ -20,7 +20,7 @@
               <span class="position">
                   {{index + 1}}
               </span>
-                <a href="single-team.html">
+                <a :href="'player/' + record.id">
                     <img :src="'img/players' +'/' + record.player_image" :alt="record.player">
                     {{record.player}}
                 </a>
@@ -33,10 +33,10 @@
         <div class="row" v-if="this.database === 'players' && this.type_name === 'card'">
             <div v-for="record in records" class="col-xs-6 col-sm-3 col-md-4 col-lg-4">
                 <div class="box-info">
-                    <a class="flexbox" href="single-player.html">
+                    <a class="flexbox" :href="'/player/' + record.id">
                         <img :src="'img/players/' + record.player_image" :alt="record.player" class="img-responsive">
                     </a>
-                    <h6 class="entry-title"><a href="single-player.html">{{record.player}}</a></h6>
+                    <h6 class="entry-title"><a :href="'/player/' + record.id">{{record.player}}</a></h6>
                 </div>
             </div>
         </div>

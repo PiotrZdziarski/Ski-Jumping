@@ -14,6 +14,11 @@
 Route::get('/', ['uses' => 'SitesController@index']);
 
 Route::get('/news/{id}', ['uses' => 'SitesController@news']);
+Route::get('/player/{id}', ['uses' => 'SitesController@player']);
+Route::get('/404', function(){
+    return view('sites.404');
+});
+Route::get('country/{id}', ['uses' => 'SitesController@country']);
 
 
 

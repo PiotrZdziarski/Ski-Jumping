@@ -710,9 +710,7 @@ pre code {
 /* line 6, ../sass/bootstrap/_grid.scss */
 .container {
   width: 100%;
-  padding-bottom: 40px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 0 60px 40px 60px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -19179,4 +19177,12 @@ table.career tr td img {
 }
 @media(max-width: 476px) {
   .info-panel{padding: 5px !important;}
+}
+
+.margin-top-minus-20 {
+  margin-top: -20px;
+}
+
+.pre-line {
+  white-space: pre-line;
 }

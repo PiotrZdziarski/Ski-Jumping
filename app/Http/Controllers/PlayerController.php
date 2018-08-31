@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Country;
 use App\Http\Resources\PlayerResource;
 use App\Player;
 use Illuminate\Http\Request;
@@ -51,14 +52,19 @@ class PlayerController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param $id
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
     public function show($id)
     {
-        //
+        $player = Player::where('id', $id)->get();
+
+        $player_country_id = $player[0]->country_id;
+        $country = Country::where('id', $player_country_id)->get();
+        $country_name = $country[0]->country;
+        $player[0] = collect($player[0])->merge(['country' => $country_name]);
+
+        return PlayerResource::collection($player);
     }
 
     /**
