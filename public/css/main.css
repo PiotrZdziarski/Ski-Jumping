@@ -714,6 +714,11 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+@media(max-width: 476px) {
+  .container {
+    padding: 0 20px 40px 20px;
+  }
+}
 @media (min-width: 576px) {
   /* line 6, ../sass/bootstrap/_grid.scss */
   .container {
@@ -18598,7 +18603,7 @@ address strong {
 /* line 2976, ../sass/main.scss */
 .item-player .head-player {
   overflow: hidden;
-  max-height: 165px;
+  max-height: 365px;
   position: relative;
 }
 /* line 2981, ../sass/main.scss */

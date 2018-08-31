@@ -28,7 +28,7 @@ class SitesController extends Controller
 
     public function country($id)
     {
-        if($id > 7) {
+        if($id > 10) {
             return redirect('404');
         }
 

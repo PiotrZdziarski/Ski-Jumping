@@ -20,10 +20,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //countries
 Route::get('countries', 'CountryController@index');
 Route::get('countriescount/{count}', 'CountryController@show_count');
+Route::get('countries_show/{id}', 'CountryController@show');
 
 //players
 Route::get('playerscount/{count}', 'PlayerController@show_count');
 Route::get('player_show/{id}', 'PlayerController@show');
+Route::get('player_show_by_country/{country_id}', 'PlayerController@show_by_country');
 
 //events
 Route::get('eventscount/{count}', 'EventController@show_count');
@@ -35,5 +37,6 @@ Route::get('newscount/{count}', 'NewsController@show_count');
 //comments
 Route::get('comment_show/{news_id}', 'CommentController@show');
 Route::post('comment_store', 'CommentController@store');
+
 
 

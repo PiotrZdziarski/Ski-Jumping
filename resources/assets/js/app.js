@@ -22,6 +22,8 @@ Vue.component('image-vue', require('./components/image-vue.vue'));
 Vue.component('recent-news', require('./components/recent-news.vue'));
 Vue.component('news', require('./components/news.vue'));
 Vue.component('form-comment', require('./components/form-comment.vue'));
+Vue.component('player_cards', require('./components/player_cards.vue'));
+
 
 const app = new Vue({
     el: '#layout'

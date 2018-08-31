@@ -14437,6 +14437,7 @@ Vue.component('image-vue', __webpack_require__(16));
 Vue.component('recent-news', __webpack_require__(61));
 Vue.component('news', __webpack_require__(66));
 Vue.component('form-comment', __webpack_require__(71));
+Vue.component('player_cards', __webpack_require__(80));
 
 var app = new Vue({
   el: '#layout'
@@ -48369,6 +48370,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -48473,6 +48502,60 @@ var render = function() {
         this.row === "born" && this.ready
           ? _c("div", [
               _vm._v("\n            " + _vm._s(this.record.born) + "\n        ")
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "foundation" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.foundation) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "coach" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.coach) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "score" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.score) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "wins" && this.ready
+          ? _c("div", [
+              _vm._v("\n            " + _vm._s(this.record.wins) + "\n        ")
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "concern" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.concern) + "\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "flight" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.flight) + " m\n        "
+              )
+            ])
+          : _vm._e(),
+        _vm._v(" "),
+        this.row === "players" && this.ready
+          ? _c("div", [
+              _vm._v(
+                "\n            " + _vm._s(this.record.players) + "\n        "
+              )
             ])
           : _vm._e()
       ])
@@ -49277,6 +49360,246 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(81)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(83)
+/* template */
+var __vue_template__ = __webpack_require__(84)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-12267b9c"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/player_cards.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-12267b9c", Component.options)
+  } else {
+    hotAPI.reload("data-v-12267b9c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(82);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(4)("66895b7c", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-12267b9c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./player_cards.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-12267b9c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./player_cards.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(3)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.padding-left[data-v-12267b9c] {\n    padding-left: 10px;\n}\n.min-height[data-v-12267b9c] {\n    min-height: 50px;\n    display: -webkit-box !important;\n    display: -ms-flexbox !important;\n    display: flex !important;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    max-height: 60px !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "player_cards",
+    props: {
+        api_link: {
+            type: String
+        }
+    },
+    data: function data() {
+        return {
+            records: ''
+        };
+    },
+    mounted: function mounted() {
+        var SELF = this;
+        axios.get('http://' + this.api_link).then(function (Response) {
+            SELF.records = Response.data.data;
+        });
+    }
+});
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "row" },
+    _vm._l(this.records, function(record) {
+      return _c(
+        "div",
+        { staticClass: "col-xl-4 col-lg-6 col-md-6 col-sm-12" },
+        [
+          _c("div", { staticClass: "item-player" }, [
+            _c("div", { staticClass: "head-player" }, [
+              _c("img", {
+                attrs: {
+                  src: "../img/players/" + record.player_image,
+                  alt: record.player
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "info-player" }, [
+              _c("span", { staticClass: "number-player" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(record.id) +
+                    "\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("h4", [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(record.player) +
+                    "\n                "
+                )
+              ]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("li", { staticClass: "min-height" }, [
+                  _c("strong", [_vm._v("BORN:")]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "padding-left" }, [
+                    _vm._v(_vm._s(record.born))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("strong", [_vm._v("Wins:")]),
+                  _vm._v(" "),
+                  _c("span", [_vm._v(_vm._s(record.wins))])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            record.id <= 8
+              ? _c(
+                  "a",
+                  {
+                    staticClass: "btn",
+                    attrs: { href: "/player/" + record.id }
+                  },
+                  [
+                    _vm._v("View Player "),
+                    _c("i", {
+                      staticClass: "fa fa-angle-right",
+                      attrs: { "aria-hidden": "true" }
+                    })
+                  ]
+                )
+              : _vm._e()
+          ])
+        ]
+      )
+    })
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-12267b9c", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

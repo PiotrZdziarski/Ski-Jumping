@@ -8,23 +8,19 @@
                 <div class="col-xl-7">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src='{{asset("img/flags/$country->country_image")}}' alt="">
+                            <img src='{{asset("img/flags/$country->country_image")}}' alt="{{$country->country}}">
                         </div>
 
                         <div class="col-md-9">
-                            <h1>COLOMBIA</h1>
+                            <h1><text-block row="country"
+                                            api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></h1>
                             <ul class="general-info">
-                                <li><h6><strong>Foundation:</strong> 1930</h6></li>
-                                <li><h6><strong>President:</strong> Juan R.</h6></li>
-                                <li><h6><strong>Manager:</strong> Pekerman</h6></li>
-                                <li><h6><strong>Total Titles:</strong> 100+</h6></li>
-                                <li><h6><strong>Location:</strong> Colombia</h6></li>
-                                <li>
-                                    <h6>
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                        <a href="https://themeforest.net/user/iwthemes/portfolio?ref=iwthemes" target="_blank">www.site.com</a>
-                                    </h6>
-                                </li>
+                                <li><h6><strong>Foundation:</strong> <text-block row="foundation"
+                                                                                 api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block> </h6></li>
+                                <li><h6><strong>Coach:</strong><text-block row="coach"
+                                                                           api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block> </h6></li>
+                                <li><h6><strong>Location:</strong> <text-block row="country"
+                                                                               api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></h6></li>
                             </ul>
                         </div>
                     </div>
@@ -61,17 +57,15 @@
 
                                 <div class="panel-box padding-b">
                                     <div class="titles">
-                                        <h4>Colombia national football team</h4>
+                                        <h4>Norway</h4>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 col-xl-4">
                                             <img src='{{asset("img/flags/$country->country_image")}}' alt="{{$country->country}}">
                                         </div>
 
-                                        <div class="col-lg-12 col-xl-8">
-                                            <p>The Colombia national football team (Spanish: Selección de fútbol de Colombia) represents Colombia in international football competitions and is overseen by the Colombian Football Federation. It is a member of the CONMEBOL and is currently ranked thirteenth in the FIFA World Rankings.[3] The team are nicknamed Los Cafeteros due to the coffee production in their country.</p>
-
-                                            <p>Since the mid-1980s, the national team has been a symbol fighting the country's negative reputation. This has made the sport popular and made the national team a sign of nationalism, pride and passion for many Colombians worldwide.</p>
+                                        <div class="col-lg-12 col-xl-8 pre-line margin-top-minus-20" style="font-size: 16px; font-family: 'Maven Pro',sans-serif;">
+                                            {{$country->description}}
                                         </div>
                                     </div>
                                 </div>
@@ -82,29 +76,7 @@
 
                             <!-- Tab Two - squad -->
                             <div class="tab-pane" id="squad">
-                                <div class="row">
-
-                                    <!-- Item Player -->
-                                    <div class="col-xl-4 col-lg-6 col-md-6">
-                                        <div class="item-player">
-                                            <div class="info-player">
-                                                <span class="number-player" style="top: 20px;">
-                                                    13
-                                                </span>
-                                                <h4 style="padding-top: 50px;">
-                                                    Cristiano Ronaldo
-                                                    <span>Forward</span>
-                                                </h4>
-                                                <ul>
-                                                    <li><strong>BORN:</strong> <span>29 września w Łowiczu</span></li>
-                                                    <li><strong>RANKING:</strong> <span>1</span></li>
-                                                </ul>
-                                            </div>
-                                            <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- End Item Player -->
-                                </div>
+                                <player_cards api_link='@php echo getenv('APP_URL')."/api/player_show_by_country/$id" @endphp'></player_cards>
                             </div>
                             <!-- End Tab Two - squad -->
 
@@ -117,16 +89,19 @@
                                             <ul>
                                                 <li>
                                                     Foundation
-                                                    <h3>1919</h3>
+                                                    <h3><text-block row="foundation"
+                                                                    api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></h3>
                                                 </li>
 
                                                 <li>
                                                     Longest flight
-                                                    <h3>252 m</h3>
+                                                    <h3><text-block row="flight"
+                                                                    api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></h3>
                                                 </li>
                                                 <li>
                                                     Concern
-                                                    <h3>Schweizerischer Skiverband</h3>
+                                                    <h3><text-block row="concern"
+                                                                    api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></h3>
                                                 </li>
 
                                             </ul>
@@ -142,10 +117,14 @@
                                                 <h4><i class="fa fa-calendar"></i>Info</h4>
                                             </div>
                                             <ul class="list-panel">
-                                                <li><p>Trainer <span>Stefan Horngacher</span></p></li>
-                                                <li><p>Participants <span>18</span></p></li>
-                                                <li><p>Score <span>1213</span></p></li>
-                                                <li><p>Generally wins <span>534</span></p></li>
+                                                <li><p>Trainer <span><text-block row="coach"
+                                                                                 api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></span></p></li>
+                                                <li><p>Participants <span><text-block row="players"
+                                                                                      api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></span></p></li>
+                                                <li><p>Score <span><text-block row="score"
+                                                                               api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></span></p></li>
+                                                <li><p>Generally wins <span><text-block row="wins"
+                                                                                        api_link='@php echo getenv('APP_URL')."/api/countries_show/$id" @endphp'></text-block></span></p></li>
                                             </ul>
                                         </div>
                                         <!-- End Attack -->

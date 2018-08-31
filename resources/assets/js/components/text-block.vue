@@ -36,6 +36,34 @@
             <div v-if="this.row === 'born' && this.ready">
                 {{this.record.born}}
             </div>
+
+            <div v-if="this.row === 'foundation' && this.ready">
+                {{this.record.foundation}}
+            </div>
+
+            <div v-if="this.row === 'coach' && this.ready">
+                {{this.record.coach}}
+            </div>
+
+            <div v-if="this.row === 'score' && this.ready">
+                {{this.record.score}}
+            </div>
+
+            <div v-if="this.row === 'wins' && this.ready">
+                {{this.record.wins}}
+            </div>
+
+            <div v-if="this.row === 'concern' && this.ready">
+                {{this.record.concern}}
+            </div>
+
+            <div v-if="this.row === 'flight' && this.ready">
+                {{this.record.flight}} m
+            </div>
+
+            <div v-if="this.row === 'players' && this.ready">
+                {{this.record.players}}
+            </div>
         </transition>
 
     </div>
