@@ -17,7 +17,7 @@
                         <span class="data-info">
                             {{record.date}}
                             / <i class="fa fa-comments"></i>
-                            <a :href="'news/' + record.id">5</a>
+                            <a :href="'news/' + record.id">{{record.comments}}</a>
                         </span>
                         <p>{{record.short_description}}<a :href="'news/' + record.id">Read More [+]</a></p>
                     </div>

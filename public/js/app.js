@@ -48690,7 +48690,7 @@ var render = function() {
                   _c("i", { staticClass: "fa fa-comments" }),
                   _vm._v(" "),
                   _c("a", { attrs: { href: "news/" + record.id } }, [
-                    _vm._v("5")
+                    _vm._v(_vm._s(record.comments))
                   ])
                 ]),
                 _vm._v(" "),

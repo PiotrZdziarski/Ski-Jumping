@@ -10,36 +10,6 @@
                 <!-- Sidebars -->
                 <aside class="col-lg-3">
 
-                    <div>
-                        <h4>Searh Sidebar</h4>
-                        <form class="search" action="#" method="Post">
-                            <div class="input-group">
-                                <input class="form-control" placeholder="Search..." name="email" type="email"
-                                       required="required">
-                                <span class="input-group-btn">
-                                            <button class="btn btn-primary" type="submit" name="subscribe">Go!</button>
-                                        </span>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Widget Categories-->
-                    <div class="panel-box">
-                        <div class="titles no-margin">
-                            <h4>Categories</h4>
-                        </div>
-                        <div class="info-panel">
-                            <ul class="list">
-                                <li><i class="fa fa-check"></i><a href="#">Design</a></li>
-                                <li><i class="fa fa-check"></i><a href="#">Photos</a></li>
-                                <li><i class="fa fa-check"></i><a href="#">Videos</a></li>
-                                <li><i class="fa fa-check"></i><a href="#">Lifestyle</a></li>
-                                <li><i class="fa fa-check"></i><a href="#">Technology</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- End Widget Categories-->
-
                     <!-- Widget Text-->
                     <div class="panel-box">
                         <div class="titles no-margin">
@@ -55,13 +25,13 @@
                     <!-- Widget img-->
                     <div class="panel-box">
                         <div class="titles no-margin">
-                            <h4>Widget Image</h4>
+                            <h4><a href="{{url('/news/2')}}">Grandmaster Stoch</a></h4>
                         </div>
-                        <img src="img/slide/1.jpg" alt="">
+                        <a href="{{url('/news/2')}}"><img src="{{asset('img/slide/stoch.jpg')}}" alt="Kamil Stoch"></a>
                         <div class="row">
                             <div class="info-panel">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, ut sit amet, consectetur
-                                    adipisicing elit, labore et dolore.</p>
+                                <p>in Planica, the season of one hero ended. The leader of the Polish team has the best
+                                    months in his career. And he still counts that this is not the end!.</p>
                             </div>
                         </div>
                     </div>
@@ -95,7 +65,8 @@
 
                         <div class="info-panel">
                             <!-- Form coment -->
-                            <form-comment api_link="@php echo getenv('APP_URL')."/api/comment_store/" @endphp" news_id="{{$id}}"></form-comment>
+                            <form-comment api_link="@php echo getenv('APP_URL')."/api/comment_store/" @endphp"
+                                          news_id="{{$id}}"></form-comment>
                             <!-- End Form coment -->
                         </div>
                     </div>

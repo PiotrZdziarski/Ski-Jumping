@@ -127,7 +127,7 @@
                                 <div class="info-general">
                                     <div class="row">
                                         <div class="col-md-4">
-                                            <img src="img/locations/fiscup.jpg" alt=""> Q
+                                            <img src="img/locations/fiscup.jpg" alt="">
                                         </div>
 
                                         <div class="col-md-8">

@@ -48,8 +48,7 @@
                     added_comment.scrollIntoView({
                         behavior: 'smooth'
                     });
-                    });
-
+                });
             }
         },
         data() {
