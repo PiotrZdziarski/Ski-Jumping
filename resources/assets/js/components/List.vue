@@ -3,9 +3,9 @@
         <ul v-if="this.database === 'countries' && this.type_name !== 'card'">
             <li v-for="(record, index) in records">
               <span class="position">
-                  {{index + 10}}
+                  {{index + 1}}
               </span>
-                <a href="single-team.html">
+                <a :href="'/country/' + record.id">
                     <img :src="'img/flags' +'/' + record.country_image" :alt="record.country">
                     {{record.country}}
                 </a>

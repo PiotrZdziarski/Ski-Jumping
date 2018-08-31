@@ -48082,10 +48082,10 @@ var render = function() {
           _vm._l(_vm.records, function(record, index) {
             return _c("li", [
               _c("span", { staticClass: "position" }, [
-                _vm._v("\n              " + _vm._s(index + 10) + "\n          ")
+                _vm._v("\n              " + _vm._s(index + 1) + "\n          ")
               ]),
               _vm._v(" "),
-              _c("a", { attrs: { href: "single-team.html" } }, [
+              _c("a", { attrs: { href: "/country/" + record.id } }, [
                 _c("img", {
                   attrs: {
                     src: "img/flags" + "/" + record.country_image,
