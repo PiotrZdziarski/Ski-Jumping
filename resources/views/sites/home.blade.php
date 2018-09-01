@@ -183,11 +183,8 @@
 
                     <!-- Adds Sidebar -->
                     <div class="panel-box">
-                        <div class="titles no-margin">
-                            <h4><i class="fa fa-link"></i>Cta</h4>
-                        </div>
-                        <a href="http://themeforest.net/user/iwthemes/portfolio?ref=iwthemes" target="_blank">
-                            <img src="img/adds/sidebar.png" class="img-responsive" alt="">
+                        <a href="https://en.wikipedia.org/wiki/Frost" target="_blank">
+                            <img src="{{asset('img/testimonials/sidebar2.png')}}" class="img-responsive" alt="">
                         </a>
                     </div>
                     <!-- End Adds Sidebar -->

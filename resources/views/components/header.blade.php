@@ -8,7 +8,7 @@
                 <div class="col">
                     <div class="logo">
                         <a href="{{url('/')}}" title="Return Home">
-                            <img src="{{asset('img/logo.png')}}" alt="Logo" class="logo_img">
+                            <img src="{{asset('img/testimonials/logo.png')}}" alt="Logo" class="logo_img">
                         </a>
                     </div>
                 </div>
@@ -17,8 +17,8 @@
                 <!-- Adds Header-->
                 <div class="col">
                     <div class="adds">
-                        <a href="http://themeforest.net/user/iwthemes/portfolio?ref=iwthemes" target="_blank">
-                            <img src="{{asset('img/adds/banner.jpg')}}" alt="" class="img-responsive">
+                        <a href="https://en.wikipedia.org/wiki/Snow" target="_blank">
+                            <img src="{{asset('img/adds/banner3.jpg')}}" alt="" class="img-responsive">
                         </a>
                     </div>
 

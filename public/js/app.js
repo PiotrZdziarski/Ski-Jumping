@@ -49678,7 +49678,7 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -49689,8 +49689,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -49727,33 +49725,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "hero-slider",
-    data: function data() {
-        return {
-            records: Object,
-            bgImage0: '',
-            bgImage1: ''
-        };
-    },
-
-    props: {
-        api_link: {
-            type: String
-        }
-    },
-    mounted: function mounted() {
-        var self = this;
-        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
-            self.records = Response.data.data;
-            var imagePathBegin = 'url("img/slide/"';
-            var imagePathEnd = ')';
-            self.bgImage1 = imagePathBegin + self.records[0].news_image + imagePathEnd;
-            self.bgImage2 = imagePathBegin + self.records[1].news_image + imagePathEnd;
-        });
-    }
+    name: "hero-slider"
 });
 
 /***/ }),
@@ -49796,7 +49770,7 @@ var staticRenderFns = [
                       "a",
                       {
                         staticClass: "btn-iw outline",
-                        attrs: { href: "/news/2" }
+                        attrs: { href: "/news/1" }
                       },
                       [
                         _vm._v("Read More "),
@@ -49833,7 +49807,7 @@ var staticRenderFns = [
                       "a",
                       {
                         staticClass: "btn-iw outline",
-                        attrs: { href: "/news/1" }
+                        attrs: { href: "/news/2" }
                       },
                       [
                         _vm._v("Read More "),
