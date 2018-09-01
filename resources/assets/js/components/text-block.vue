@@ -1,67 +1,63 @@
 <template>
     <div>
         <transition-group name="slide">
-            <div v-if="this.row === 'title' && this.ready">
+            <div v-if="this.row === 'title' && this.ready" :key="1">
                 {{this.record.title}}
             </div>
 
-            <div class="pre-line" v-if="this.row === 'description' && this.ready">
+            <div class="pre-line" v-if="this.row === 'description' && this.ready"  :key="2">
                 {{this.record.description}}
             </div>
 
-            <div v-if="this.row === 'player' && this.ready">
+            <div v-if="this.row === 'player' && this.ready" :key="3">
                 {{this.record.player}}
             </div>
 
-            <div v-if="this.row === 'age' && this.ready">
+            <div v-if="this.row === 'age' && this.ready" :key="4">
                 {{this.record.age}}
             </div>
 
-            <div v-if="this.row === 'wins' && this.ready">
-                {{this.record.wins}}
-            </div>
-
-            <div v-if="this.row === 'country' && this.ready">
+            <div v-if="this.row === 'country' && this.ready" :key="6">
                 {{this.record.country}}
             </div>
 
-            <div v-if="this.row === 'weight' && this.ready">
+            <div v-if="this.row === 'weight' && this.ready" :key="7">
                 {{this.record.weight}} kg
             </div>
 
-            <div v-if="this.row === 'height' && this.ready">
+            <div v-if="this.row === 'height' && this.ready" :key="8">
                 {{this.record.height}} cm
             </div>
 
-            <div v-if="this.row === 'born' && this.ready">
+            <div v-if="this.row === 'born' && this.ready" :key="9">
                 {{this.record.born}}
             </div>
 
-            <div v-if="this.row === 'foundation' && this.ready">
+            <div v-if="this.row === 'foundation' && this.ready" :key="10">
                 {{this.record.foundation}}
             </div>
 
-            <div v-if="this.row === 'coach' && this.ready">
+            <div v-if="this.row === 'coach' && this.ready" :key="11">
                 {{this.record.coach}}
             </div>
 
-            <div v-if="this.row === 'score' && this.ready">
+            <div v-if="this.row === 'score' && this.ready" :key="12">
                 {{this.record.score}}
             </div>
 
-            <div v-if="this.row === 'wins' && this.ready">
+            <div v-if="this.row === 'wins' && this.ready" :key="13">
                 {{this.record.wins}}
             </div>
 
-            <div v-if="this.row === 'concern' && this.ready">
+            <div v-if="this.row === 'concern' && this.ready" :key="14">
                 {{this.record.concern}}
             </div>
 
-            <div v-if="this.row === 'flight' && this.ready">
+            <div v-if="this.row === 'flight' && this.ready" :key="15">
                 {{this.record.flight}} m
             </div>
 
-            <div v-if="this.row === 'players' && this.ready">
+            <div v-if="this.row === 'players' && this.ready" :key="16">
                 {{this.record.players}}
             </div>
         </transition-group>

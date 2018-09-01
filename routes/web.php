@@ -19,6 +19,9 @@ Route::get('/404', function(){
     return view('sites.404');
 });
 Route::get('country/{id}', ['uses' => 'SitesController@country']);
+Route::get('/about', function(){
+   return 'About';
+});
 
 
 

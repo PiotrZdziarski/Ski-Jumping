@@ -14438,6 +14438,7 @@ Vue.component('recent-news', __webpack_require__(61));
 Vue.component('news', __webpack_require__(66));
 Vue.component('form-comment', __webpack_require__(71));
 Vue.component('player_cards', __webpack_require__(76));
+Vue.component('hero-slider', __webpack_require__(85));
 
 var app = new Vue({
   el: '#layout'
@@ -48394,10 +48395,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -48438,7 +48435,7 @@ var render = function() {
     [
       _c("transition-group", { attrs: { name: "slide" } }, [
         this.row === "title" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 1 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.title) + "\n        "
               )
@@ -48446,7 +48443,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "description" && this.ready
-          ? _c("div", { staticClass: "pre-line" }, [
+          ? _c("div", { key: 2, staticClass: "pre-line" }, [
               _vm._v(
                 "\n            " +
                   _vm._s(this.record.description) +
@@ -48456,7 +48453,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "player" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 3 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.player) + "\n        "
               )
@@ -48464,19 +48461,13 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "age" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 4 }, [
               _vm._v("\n            " + _vm._s(this.record.age) + "\n        ")
             ])
           : _vm._e(),
         _vm._v(" "),
-        this.row === "wins" && this.ready
-          ? _c("div", [
-              _vm._v("\n            " + _vm._s(this.record.wins) + "\n        ")
-            ])
-          : _vm._e(),
-        _vm._v(" "),
         this.row === "country" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 6 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.country) + "\n        "
               )
@@ -48484,7 +48475,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "weight" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 7 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.weight) + " kg\n        "
               )
@@ -48492,7 +48483,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "height" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 8 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.height) + " cm\n        "
               )
@@ -48500,13 +48491,13 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "born" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 9 }, [
               _vm._v("\n            " + _vm._s(this.record.born) + "\n        ")
             ])
           : _vm._e(),
         _vm._v(" "),
         this.row === "foundation" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 10 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.foundation) + "\n        "
               )
@@ -48514,7 +48505,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "coach" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 11 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.coach) + "\n        "
               )
@@ -48522,7 +48513,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "score" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 12 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.score) + "\n        "
               )
@@ -48530,13 +48521,13 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "wins" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 13 }, [
               _vm._v("\n            " + _vm._s(this.record.wins) + "\n        ")
             ])
           : _vm._e(),
         _vm._v(" "),
         this.row === "concern" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 14 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.concern) + "\n        "
               )
@@ -48544,7 +48535,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "flight" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 15 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.flight) + " m\n        "
               )
@@ -48552,7 +48543,7 @@ var render = function() {
           : _vm._e(),
         _vm._v(" "),
         this.row === "players" && this.ready
-          ? _c("div", [
+          ? _c("div", { key: 16 }, [
               _vm._v(
                 "\n            " + _vm._s(this.record.players) + "\n        "
               )
@@ -49597,6 +49588,276 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(86)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(88)
+/* template */
+var __vue_template__ = __webpack_require__(89)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-601697cd"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/hero-slider.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-601697cd", Component.options)
+  } else {
+    hotAPI.reload("data-v-601697cd", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(87);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("4fb3c798", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-601697cd\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./hero-slider.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-601697cd\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./hero-slider.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 88 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "hero-slider",
+    data: function data() {
+        return {
+            records: Object,
+            bgImage0: '',
+            bgImage1: ''
+        };
+    },
+
+    props: {
+        api_link: {
+            type: String
+        }
+    },
+    mounted: function mounted() {
+        var self = this;
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
+            self.records = Response.data.data;
+            var imagePathBegin = 'url("img/slide/"';
+            var imagePathEnd = ')';
+            self.bgImage1 = imagePathBegin + self.records[0].news_image + imagePathEnd;
+            self.bgImage2 = imagePathBegin + self.records[1].news_image + imagePathEnd;
+        });
+    }
+});
+
+/***/ }),
+/* 89 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hero-header" }, [
+      _c("div", { staticClass: "hero-slider", attrs: { id: "hero-slider" } }, [
+        _c(
+          "div",
+          {
+            staticClass: "item-slider",
+            staticStyle: { "background-image": "url('img/slide/1.jpg')" }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "row align-items-center" }, [
+                _c("div", { staticClass: "col-lg-7" }, [
+                  _c("div", { staticClass: "info-slider" }, [
+                    _c("h1", [_vm._v("Season 2018/2019")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "The autumn meeting of the activists of the International Ski Federation in Zurich brought decisions related to the initial appearance of the calendars of individual cycles for the next season 2018/2019."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn-iw outline",
+                        attrs: { href: "/news/2" }
+                      },
+                      [
+                        _vm._v("Read More "),
+                        _c("i", { staticClass: "fa fa-long-arrow-right" })
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "item-slider",
+            staticStyle: { "background-image": "url('img/slide/stoch.jpg')" }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "row align-items-center" }, [
+                _c("div", { staticClass: "col-lg-7" }, [
+                  _c("div", { staticClass: "info-slider" }, [
+                    _c("h1", [_vm._v("Grandmaster Stoch")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "In Planica, the season of one hero ended. The leader of the Polish team has the best months in his career. And he still counts that this is not the end!"
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn-iw outline",
+                        attrs: { href: "/news/1" }
+                      },
+                      [
+                        _vm._v("Read More "),
+                        _c("i", { staticClass: "fa fa-long-arrow-right" })
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-601697cd", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
