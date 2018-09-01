@@ -13,7 +13,8 @@
 
 Route::get('/', ['uses' => 'SitesController@index']);
 
-Route::get('/news/{id}', ['uses' => 'SitesController@news']);
+Route::get('/news/{id}', ['uses' => 'SitesController@single_news']);
+Route::get('/news', ['uses' => 'SitesController@all_news']);
 Route::get('/player/{id}', ['uses' => 'SitesController@player']);
 Route::get('/404', function(){
     return view('sites.404');

@@ -10308,7 +10308,10 @@ ul.sub-current .current .sf-with-ul:after {
 /* line 58, ../sass/_partials/_mobile_nav.scss */
 .mm-panels,
 .mm-panels > .mm-panel {
-  background: inherit;
+  background: white;
+  color: dodgerblue;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 24px;
   border-color: inherit;
 }
 
@@ -10420,6 +10423,7 @@ li.mm-vertical.mm-opened > .mm-panel {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  color: #1b4b72 !important;
 }
 
 /* line 136, ../sass/_partials/_mobile_nav.scss */
@@ -10772,6 +10776,14 @@ html.mm-blocking #mm-blocker {
 /* line 355, ../sass/_partials/_mobile_nav.scss */
 .mm-menu.mm-current {
   display: block;
+}
+.mm-listview li a {
+  font-size: 18px;
+}
+.mm-listview li {
+  box-shadow: 0 3px 6px #eaeaea;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* line 358, ../sass/_partials/_mobile_nav.scss */

@@ -31,6 +31,7 @@ Route::get('player_show_by_country/{country_id}', 'PlayerController@show_by_coun
 Route::get('eventscount/{count}', 'EventController@show_count');
 
 //news
+Route::get('news', 'NewsController@index');
 Route::get('news_show/{id}', 'NewsController@show');
 Route::get('newscount/{count}', 'NewsController@show_count');
 
