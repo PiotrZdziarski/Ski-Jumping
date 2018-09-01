@@ -1,6 +1,6 @@
 <template>
     <div>
-        <transition name="slide">
+        <transition-group name="slide">
             <div v-if="this.row === 'title' && this.ready">
                 {{this.record.title}}
             </div>
@@ -64,7 +64,7 @@
             <div v-if="this.row === 'players' && this.ready">
                 {{this.record.players}}
             </div>
-        </transition>
+        </transition-group>
 
     </div>
 </template>

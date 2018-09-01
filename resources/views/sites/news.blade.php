@@ -7,37 +7,7 @@
         <div class="container paddings-mini">
             <div class="row">
 
-                <!-- Sidebars -->
-                <aside class="col-lg-3">
-
-                    <!-- Widget Text-->
-                    <div class="panel-box">
-                        <div class="titles no-margin">
-                            <h4>Widget Text</h4>
-                        </div>
-                        <div class="info-panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, incididunt ut labore et
-                                dolore.</p>
-                        </div>
-                    </div>
-                    <!-- End Widget Text-->
-
-                    <!-- Widget img-->
-                    <div class="panel-box">
-                        <div class="titles no-margin">
-                            <h4><a href="{{url('/news/2')}}">Grandmaster Stoch</a></h4>
-                        </div>
-                        <a href="{{url('/news/2')}}"><img src="{{asset('img/slide/stoch.jpg')}}" alt="Kamil Stoch"></a>
-                        <div class="row">
-                            <div class="info-panel">
-                                <p>in Planica, the season of one hero ended. The leader of the Polish team has the best
-                                    months in his career. And he still counts that this is not the end!.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Widget img-->
-                </aside>
-                <!-- End Sidebars -->
+                @include('components.sidebar')
 
 
                 <div class="col-lg-9">

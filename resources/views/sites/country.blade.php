@@ -27,7 +27,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-image-team" style="background:url('../img/countries/{{$country->team_image}}');"></div>
+        <div class="bg-image-team" style="background:url('../img/countries/{{$country->team_image}}'); background-size:cover; background-repeat: no-repeat; background-position: 50%;"></div>
     </div>
     <!-- End Section Title -->
 
@@ -137,39 +137,7 @@
                         <!-- Content Tabs -->
                     </div>
 
-                    <!-- Side info single team-->
-                    <div class="col-lg-3 padding-top-mini">
-
-                        <div class="panel-box">
-                            <div class="titles no-margin">
-                                <h4>Presentation</h4>
-                            </div>
-                            <!-- Locations Video -->
-                            <div class="row">
-                                <iframe src="https://www.youtube.com/embed/ewjq_csVFDk" class="video"></iframe>
-                                <div class="info-panel">
-                                    <h4>Season 2017/2018</h4>
-                                    <p>FIS Ski Jumping World Cup was the 39th World Cup season in ski jumping for men, the
-                                        21st official World Cup season in ski flying, and the 7th for ladies.</p>
-                                </div>
-                            </div>
-                            <!-- End Locations Video -->
-                        </div>
-
-                        <!-- Widget Text-->
-                        <div class="panel-box">
-                            <div class="titles no-margin">
-                                <h4>Widget Image</h4>
-                            </div>
-                            <img src="img/slide/1.jpg" alt="">
-                            <div class="row">
-                                <div class="info-panel">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,  ut sit amet, consectetur adipisicing elit, labore et dolore.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Widget Text-->
-                    </div>
+                    @include('components.sidebar')
                     <!-- end Side info single team-->
 
                 </div>

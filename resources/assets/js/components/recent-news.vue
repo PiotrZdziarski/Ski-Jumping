@@ -5,7 +5,7 @@
             <h4>Recent News</h4>
         </div>
         <transition-group name="fade">
-            <div class="post-item" v-for="record in records" v-bind:key="record">
+            <div class="post-item" v-for="(record, index) in records" :key="index">
                 <div class="row">
                     <div class="col-md-4">
                         <a :href="'news/' + record.id">
