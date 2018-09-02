@@ -23,6 +23,7 @@ Route::get('countriescount/{count}', 'CountryController@show_count');
 Route::get('countries_show/{id}', 'CountryController@show');
 
 //players
+Route::get('players/{order_by?}', 'PlayerController@index');
 Route::get('playerscount/{count}', 'PlayerController@show_count');
 Route::get('player_show/{id}', 'PlayerController@show');
 Route::get('player_show_by_country/{country_id}', 'PlayerController@show_by_country');

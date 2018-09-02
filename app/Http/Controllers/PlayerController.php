@@ -9,7 +9,45 @@ use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
+    /**
+     * Retrieve all players ordered by country_id or id
+     * @param string $order_by
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     */
+    public function index($order_by = 'id')
+    {
+        if(isset($order_by)) {
+            if ($order_by == 'country_id') {
+                $players = Player::orderBy('country_id')->get();
+            }
 
+            else if($order_by == 'id') {
+                $players = Player::get();
+            }
+            else {
+                $players = Player::get();
+            }
+
+        } else {
+            $players = Player::get();
+        }
+
+        $countries = Country::get();
+
+        $playersCount = count($players);
+        $countriesCount = count($countries);
+
+        for($i= 0; $i < $playersCount; $i++) {
+            for($j = 0; $j < $countriesCount; $j++) {
+                if($players[$i]->country_id == $countries[$j]->id) {
+                    $players[$i] = collect($players[$i])->merge(['country' => $countries[$j]->country]);
+                    break;
+                }
+            }
+        }
+
+        return PlayerResource::collection($players);
+    }
 
     /**
     * Show number of results

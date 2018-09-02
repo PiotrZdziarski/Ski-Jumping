@@ -14438,7 +14438,8 @@ Vue.component('recent-news', __webpack_require__(61));
 Vue.component('news', __webpack_require__(66));
 Vue.component('form-comment', __webpack_require__(71));
 Vue.component('player_cards', __webpack_require__(76));
-Vue.component('hero-slider', __webpack_require__(81));
+Vue.component('player_cards', __webpack_require__(76));
+Vue.component('all_players', __webpack_require__(90));
 
 var app = new Vue({
   el: '#layout'
@@ -49584,25 +49585,39 @@ if (false) {
 }
 
 /***/ }),
-/* 81 */
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 87 */,
+/* 88 */,
+/* 89 */,
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(82)
+  __webpack_require__(91)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(84)
+var __vue_script__ = __webpack_require__(93)
 /* template */
-var __vue_template__ = __webpack_require__(85)
+var __vue_template__ = __webpack_require__(94)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-601697cd"
+var __vue_scopeId__ = "data-v-8bce7a66"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -49613,7 +49628,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "resources/assets/js/components/hero-slider.vue"
+Component.options.__file = "resources/assets/js/components/all_players.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -49622,9 +49637,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-601697cd", Component.options)
+    hotAPI.createRecord("data-v-8bce7a66", Component.options)
   } else {
-    hotAPI.reload("data-v-601697cd", Component.options)
+    hotAPI.reload("data-v-8bce7a66", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -49635,23 +49650,23 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 82 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(83);
+var content = __webpack_require__(92);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("4fb3c798", content, false, {});
+var update = __webpack_require__(3)("58473dc0", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-601697cd\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./hero-slider.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-601697cd\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./hero-slider.vue");
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8bce7a66\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./all_players.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8bce7a66\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./all_players.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -49661,7 +49676,7 @@ if(false) {
 }
 
 /***/ }),
-/* 83 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -49669,17 +49684,35 @@ exports = module.exports = __webpack_require__(2)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n.lds-dual-ring[data-v-8bce7a66] {\n    display: inline-block;\n    width: 90px;\n    height: 90px;\n    position: relative;\n    left: 50%;\n    padding-bottom: 175px;\n}\n.lds-dual-ring[data-v-8bce7a66]:after {\n    content: \" \";\n    display: block;\n    width: 70px;\n    height: 70px;\n    margin: 1px;\n    border-radius: 50%;\n    border: 8px solid lightgray;\n    border-color: lightgray transparent lightgray transparent;\n    -webkit-animation: lds-dual-ring-data-v-8bce7a66 1.2s linear infinite;\n            animation: lds-dual-ring-data-v-8bce7a66 1.2s linear infinite;\n}\n@-webkit-keyframes lds-dual-ring-data-v-8bce7a66 {\n0% {\n        -webkit-transform: rotate(0deg);\n                transform: rotate(0deg);\n}\n100% {\n        -webkit-transform: rotate(360deg);\n                transform: rotate(360deg);\n}\n}\n@keyframes lds-dual-ring-data-v-8bce7a66 {\n0% {\n        -webkit-transform: rotate(0deg);\n                transform: rotate(0deg);\n}\n100% {\n        -webkit-transform: rotate(360deg);\n                transform: rotate(360deg);\n}\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 84 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -49717,101 +49750,217 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
-    name: "hero-slider"
+    name: "all_players",
+    props: {
+        api_link: {
+            type: String
+        }
+    },
+    data: function data() {
+        return {
+            records: '',
+            loading: false
+        };
+    },
+
+    methods: {
+        orderByCountry: function orderByCountry() {
+            this.records = [];
+            this.loading = true;
+            var SELF = this;
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link + '/country_id').then(function (Response) {
+                SELF.records = Response.data.data;
+                this.loading = false;
+            });
+        },
+        orderBySCore: function orderBySCore() {
+            this.records = [];
+            this.loading = true;
+            var SELF = this;
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
+                SELF.records = Response.data.data;
+                this.loading = false;
+            });
+        }
+    },
+    mounted: function mounted() {
+        var SELF = this;
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
+            SELF.records = Response.data.data;
+        });
+    }
 });
 
 /***/ }),
-/* 85 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("section", { staticClass: "content-info" }, [
+    _c("div", { staticClass: "portfolioFilter" }, [
+      _c(
+        "div",
+        { staticClass: "container", staticStyle: { "padding-top": "30px" } },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "current",
+              attrs: { href: "#score", "data-filter": "*" },
+              on: { click: _vm.orderBySCore }
+            },
+            [_vm._v("Score")]
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              attrs: { href: "#country", "data-filter": ".forward" },
+              on: { click: _vm.orderByCountry }
+            },
+            [_vm._v("Country")]
+          )
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container padding-top" }, [
+      _c(
+        "div",
+        {
+          staticClass: "row",
+          staticStyle: { display: "flex", "align-items": "center" }
+        },
+        _vm._l(this.records, function(record) {
+          return _c("div", { staticClass: "col-xl-3 col-lg-4 col-md-6" }, [
+            _c("div", { staticClass: "item-player" }, [
+              _c("div", { staticClass: "head-player" }, [
+                record.id < 9
+                  ? _c("a", { attrs: { href: "/player/" + record.id } }, [
+                      _c("img", {
+                        staticClass: "img",
+                        attrs: {
+                          src: "img/players/" + record.player_image,
+                          alt: record.player
+                        }
+                      })
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                record.id >= 9
+                  ? _c("img", {
+                      staticClass: "img",
+                      attrs: {
+                        src: "img/players/" + record.player_image,
+                        alt: record.player
+                      }
+                    })
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "info-player" }, [
+                _c("span", { staticClass: "number-player" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(record.id) +
+                      "\n                "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("h4", [
+                  _vm._v(
+                    "\n                            " +
+                      _vm._s(record.player) +
+                      "\n                        "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("ul", [
+                  _c("li", [
+                    _c("strong", [_vm._v("NATIONALITY")]),
+                    _vm._v(" "),
+                    _c("span", [
+                      _c("img", {
+                        attrs: { src: "img/clubs-logos/colombia.png", alt: "" }
+                      }),
+                      _vm._v(" " + _vm._s(record.country) + " ")
+                    ])
+                  ]),
+                  _c("li", [
+                    _c("strong", [_vm._v("SCORE:")]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v(_vm._s(record.score))])
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    {
+                      staticStyle: { display: "flex", "align-items": "center" }
+                    },
+                    [
+                      _c(
+                        "strong",
+                        {
+                          staticStyle: {
+                            "padding-right": "10px",
+                            display: "block"
+                          }
+                        },
+                        [_vm._v("BORN:")]
+                      ),
+                      _vm._v(" "),
+                      _c("span", [_vm._v(_vm._s(record.born))])
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              record.id < 9
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn",
+                      attrs: { href: "/player/" + record.id }
+                    },
+                    [
+                      _vm._v("View Player "),
+                      _c("i", {
+                        staticClass: "fa fa-angle-right",
+                        attrs: { "aria-hidden": "true" }
+                      })
+                    ]
+                  )
+                : _vm._e()
+            ])
+          ])
+        })
+      )
+    ]),
+    _vm._v(" "),
+    _vm.loading === true
+      ? _c("div", { staticClass: "lds-dual-ring" })
+      : _vm._e()
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "hero-header" }, [
-      _c("div", { staticClass: "hero-slider", attrs: { id: "hero-slider" } }, [
-        _c(
-          "div",
-          {
-            staticClass: "item-slider",
-            staticStyle: { "background-image": "url('img/slide/1.jpg')" }
-          },
-          [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row align-items-center" }, [
-                _c("div", { staticClass: "col-lg-7" }, [
-                  _c("div", { staticClass: "info-slider" }, [
-                    _c("h1", [_vm._v("Season 2018/2019")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "The autumn meeting of the activists of the International Ski Federation in Zurich brought decisions related to the initial appearance of the calendars of individual cycles for the next season 2018/2019."
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn-iw outline",
-                        attrs: { href: "/news/1" }
-                      },
-                      [
-                        _vm._v("Read More "),
-                        _c("i", { staticClass: "fa fa-long-arrow-right" })
-                      ]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "item-slider",
-            staticStyle: { "background-image": "url('img/slide/stoch.jpg')" }
-          },
-          [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row align-items-center" }, [
-                _c("div", { staticClass: "col-lg-7" }, [
-                  _c("div", { staticClass: "info-slider" }, [
-                    _c("h1", [_vm._v("Grandmaster Stoch")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _vm._v(
-                        "In Planica, the season of one hero ended. The leader of the Polish team has the best months in his career. And he still counts that this is not the end!"
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn-iw outline",
-                        attrs: { href: "/news/2" }
-                      },
-                      [
-                        _vm._v("Read More "),
-                        _c("i", { staticClass: "fa fa-long-arrow-right" })
-                      ]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ])
+    return _c("h5", [
+      _c("i", {
+        staticClass: "fa fa-filter",
+        attrs: { "aria-hidden": "true" }
+      }),
+      _vm._v("Filter By:")
     ])
   }
 ]
@@ -49820,15 +49969,9 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-601697cd", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-8bce7a66", module.exports)
   }
 }
-
-/***/ }),
-/* 86 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

@@ -13,7 +13,7 @@
 
 
             <li>
-                <a href="contact.html">Contact</a>
+                <a href="{{url('/players')}}">Players</a>
             </li>
         </ul>
         <!-- End Menu-->

@@ -15,6 +15,7 @@ class SitesController extends Controller
         return view('sites.home');
     }
 
+
     /**
      * Preview one news
      * @param $id
@@ -26,6 +27,7 @@ class SitesController extends Controller
         return view('sites.news', ['id' => $id, 'title' => $title->first()->title]);
     }
 
+
     /**
      * Preview all news
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -34,6 +36,14 @@ class SitesController extends Controller
     {;
         return view('sites.all_news');
     }
+
+
+
+    public function all_players()
+    {
+        return view('sites.all_players');
+    }
+
 
 
     /**
