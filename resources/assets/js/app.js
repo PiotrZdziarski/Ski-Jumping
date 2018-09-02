@@ -22,9 +22,8 @@ Vue.component('image-vue', require('./components/image-vue.vue'));
 Vue.component('recent-news', require('./components/recent-news.vue'));
 Vue.component('news', require('./components/news.vue'));
 Vue.component('form-comment', require('./components/form-comment.vue'));
-Vue.component('player_cards', require('./components/player_cards.vue'));
-Vue.component('player_cards', require('./components/player_cards.vue'));
 Vue.component('all_players', require('./components/all_players.vue'));
+Vue.component('all_countries', require('./components/all_countries.vue'));
 
 
 const app = new Vue({

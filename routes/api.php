@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 //countries
-Route::get('countries', 'CountryController@index');
+Route::get('countries/{order_by?}', 'CountryController@index');
 Route::get('countriescount/{count}', 'CountryController@show_count');
 Route::get('countries_show/{id}', 'CountryController@show');
 

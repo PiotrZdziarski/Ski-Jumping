@@ -8,6 +8,12 @@ use App\Http\Resources\EventResource;
 
 class EventController extends Controller
 {
+    /**
+     * Returns number of events
+     * @param $count
+     * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
+     *
+     */
     public function show_count($count)
     {
         $events = Event::take($count)->get();

@@ -9,11 +9,20 @@ use Illuminate\Http\Request;
 class CountryController extends Controller
 {
     /**
+     * Preview all countries
      * @return \Illuminate\Http\Resources\Json\AnonymousResourceCollection
      */
-    public function index()
+    public function index($order_by = 'id')
     {
-        $countries = Country::all();
+        if($order_by == 'id') {
+            $countries = Country::all();
+        }
+        else if($order_by == 'score') {
+            $countries = Country::orderBy('score', 'desc')->get();
+        }
+        else {
+            $countries = Country::all();
+        }
 
         return CountryResource::collection($countries);
     }

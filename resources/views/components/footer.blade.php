@@ -40,6 +40,10 @@
             <div style="display: inline-block; margin-left: 20px;">
                 <a href="{{url('/players')}}" class="hrefFooter">Players</a>
             </div>
+
+            <div style="display: inline-block; margin-left: 20px;">
+                <a href="{{url('/countries')}}" class="hrefFooter">Countries</a>
+            </div>
         </div>
         <!-- End Social Icons-->
     </div>

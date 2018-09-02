@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Country;
 use Illuminate\Support\Facades\DB;
 
 class SitesController extends Controller
@@ -33,15 +34,18 @@ class SitesController extends Controller
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function all_news()
-    {;
+    {
         return view('sites.all_news');
     }
 
 
-
+    /**
+     * Preview all players
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function all_players()
     {
-        return view('sites.all_players');
+        return view('sites.players');
     }
 
 
@@ -74,5 +78,16 @@ class SitesController extends Controller
 
         $country = DB::table('countries')->where('id', $id)->get();
         return view('sites.country', ['id' => $id, 'country' => $country->first()]);
+    }
+
+
+
+    /**
+     * Preview all countries
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function all_countries()
+    {
+        return view('sites.all_countries');
     }
 }

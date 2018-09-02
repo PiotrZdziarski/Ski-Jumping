@@ -15,6 +15,10 @@
             <li>
                 <a href="{{url('/players')}}">Players</a>
             </li>
+
+            <li>
+                <a href="{{url('/countries')}}">Countries</a>
+            </li>
         </ul>
         <!-- End Menu-->
     </div>
@@ -37,7 +41,11 @@
 
 
         <li>
-            <a href="contact.html">Contact</a>
+            <a href="{{url('/players')}}">Players</a>
+        </li>
+
+        <li>
+            <a href="{{url('/countries')}}">Countries</a>
         </li>
     </ul>
     <!-- End Menu-->

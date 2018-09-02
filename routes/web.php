@@ -15,6 +15,7 @@ Route::get('/', ['uses' => 'SitesController@index']);
 
 Route::get('/news/{id}', ['uses' => 'SitesController@single_news']);
 Route::get('/news', ['uses' => 'SitesController@all_news']);
+Route::get('/countries', ['uses' => 'SitesController@all_countries']);
 Route::get('/players', ['uses' => 'SitesController@all_players']);
 Route::get('/player/{id}', ['uses' => 'SitesController@player']);
 Route::get('/404', function(){
