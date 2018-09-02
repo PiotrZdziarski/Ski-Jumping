@@ -19203,3 +19203,15 @@ table.career tr td img {
 .pre-line {
   white-space: pre-line;
 }
+
+.hrefFooter {
+  color: white;
+  font-size: 16px;
+  font-family: 'Maven Pro', sans-serif;
+}
+
+
+.grayHref {
+  color: #cccccc;
+  font-family: 'Maven Pro', sans-serif;
+}

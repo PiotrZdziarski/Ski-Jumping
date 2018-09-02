@@ -4,49 +4,52 @@
         <div class="portfolioFilter">
             <div class="container" style="padding-top: 30px;">
                 <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
-                <a href="#score" @click="orderBySCore" data-filter="*" class="current">Score</a>
-                <a href="#country" @click="orderByCountry" data-filter=".forward">Country</a>
+                <a @click="orderByScore" href="#score" class="current">Score</a>
+                <a @click="orderByCountry" href="#players">Country</a>
             </div>
         </div>
         <div class="container padding-top">
+            <transition name="fade">
             <div class="row" style="display:flex; align-items:center;">
-
-                <!-- Item Player -->
-                <div v-for="record in this.records" class="col-xl-3 col-lg-4 col-md-6">
-                    <div class="item-player">
-                        <div class="head-player">
-                            <a v-if="record.id < 9" :href="'/player/' + record.id">
-                                <img class="img" :src="'img/players/' + record.player_image" :alt="record.player">
-                            </a>
-                            <img class="img" v-if="record.id >= 9" :src="'img/players/' + record.player_image"
-                                 :alt="record.player">
+                    <!-- Item Player -->
+                    <div v-for="(record,index) in this.records" :key="index" class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="item-player">
+                            <div class="head-player">
+                                <a v-if="record.id < 9" :href="'/player/' + record.id">
+                                    <img class="img" :src="'img/players/' + record.player_image" :alt="record.player">
+                                </a>
+                                <img class="img" v-if="record.id >= 9" :src="'img/players/' + record.player_image"
+                                     :alt="record.player">
+                            </div>
+                            <div class="info-player">
+                                <span class="number-player">
+                                    {{record.id}}
+                                </span>
+                                <h4>
+                                    {{record.player}}
+                                </h4>
+                                <ul>
+                                    <li>
+                                        <strong>NATIONALITY</strong> <span><img
+                                            :src="'img/flags/' + record.country_image" :alt="record.country"> {{record.country}} </span>
+                                    </li>
+                                    <li><strong>SCORE:</strong> <span>{{record.score}}</span></li>
+                                    <li style="display: flex; align-items:center;"><strong
+                                            style="padding-right: 10px; display:block">BORN:</strong>
+                                        <span>{{record.born}}</span></li>
+                                </ul>
+                            </div>
+                            <a v-if="record.id < 9" :href="'/player/' + record.id" class="btn">View Player <i
+                                    class="fa fa-angle-right"
+                                    aria-hidden="true"></i></a>
                         </div>
-                        <div class="info-player">
-                    <span class="number-player">
-                        {{record.id}}
-                    </span>
-                            <h4>
-                                {{record.player}}
-                            </h4>
-                            <ul>
-                                <li>
-                                    <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/colombia.png" alt=""> {{record.country}} </span
-                                </li>
-                                <li><strong>SCORE:</strong> <span>{{record.score}}</span></li>
-                                <li style="display: flex; align-items:center;"><strong
-                                        style="padding-right: 10px; display:block">BORN:</strong>
-                                    <span>{{record.born}}</span></li>
-                            </ul>
-                        </div>
-                        <a v-if="record.id < 9" :href="'/player/' + record.id" class="btn">View Player <i class="fa fa-angle-right"
-                                                                                aria-hidden="true"></i></a>
                     </div>
-                </div>
-                <!-- End Item Player -->
+                    <!-- End Item Player -->
 
             </div>
+            </transition>
         </div>
-        <div v-if="loading === true" class="lds-dual-ring"></div>
+        <div v-if="this.loading === true" class="lds-dual-ring"></div>
     </section>
 </template>
 
@@ -63,7 +66,7 @@
         data() {
             return {
                 records: '',
-                loading: false
+                loading: true
             };
         },
         methods: {
@@ -73,17 +76,17 @@
                 const SELF = this;
                 axios.get('http://' + this.api_link + '/country_id').then(function (Response) {
                     SELF.records = Response.data.data;
-                    this.loading = false;
+                    SELF.loading = false;
                 });
             },
 
-            orderBySCore() {
+            orderByScore() {
                 this.records = [];
                 this.loading = true;
                 const SELF = this;
                 axios.get('http://' + this.api_link).then(function (Response) {
                     SELF.records = Response.data.data;
-                    this.loading = false;
+                    SELF.loading = false;
                 });
             }
         },
@@ -91,6 +94,7 @@
             const SELF = this;
             axios.get('http://' + this.api_link).then(function (Response) {
                 SELF.records = Response.data.data;
+                SELF.loading = false;
             });
         }
     }

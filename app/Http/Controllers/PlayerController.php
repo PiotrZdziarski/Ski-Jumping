@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Country;
 use App\Http\Resources\PlayerResource;
 use App\Player;
-use Illuminate\Http\Request;
 
 class PlayerController extends Controller
 {
@@ -41,6 +40,7 @@ class PlayerController extends Controller
             for($j = 0; $j < $countriesCount; $j++) {
                 if($players[$i]->country_id == $countries[$j]->id) {
                     $players[$i] = collect($players[$i])->merge(['country' => $countries[$j]->country]);
+                    $players[$i] = collect($players[$i])->merge(['country_image' => $countries[$j]->country_image]);
                     break;
                 }
             }

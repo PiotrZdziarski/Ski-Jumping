@@ -49749,6 +49749,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -49762,7 +49765,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             records: '',
-            loading: false
+            loading: true
         };
     },
 
@@ -49773,16 +49776,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var SELF = this;
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link + '/country_id').then(function (Response) {
                 SELF.records = Response.data.data;
-                this.loading = false;
+                SELF.loading = false;
             });
         },
-        orderBySCore: function orderBySCore() {
+        orderByScore: function orderByScore() {
             this.records = [];
             this.loading = true;
             var SELF = this;
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
                 SELF.records = Response.data.data;
-                this.loading = false;
+                SELF.loading = false;
             });
         }
     },
@@ -49790,6 +49793,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         var SELF = this;
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('http://' + this.api_link).then(function (Response) {
             SELF.records = Response.data.data;
+            SELF.loading = false;
         });
     }
 });
@@ -49814,138 +49818,153 @@ var render = function() {
             "a",
             {
               staticClass: "current",
-              attrs: { href: "#score", "data-filter": "*" },
-              on: { click: _vm.orderBySCore }
+              attrs: { href: "#score" },
+              on: { click: _vm.orderByScore }
             },
             [_vm._v("Score")]
           ),
           _vm._v(" "),
           _c(
             "a",
-            {
-              attrs: { href: "#country", "data-filter": ".forward" },
-              on: { click: _vm.orderByCountry }
-            },
+            { attrs: { href: "#players" }, on: { click: _vm.orderByCountry } },
             [_vm._v("Country")]
           )
         ]
       )
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "container padding-top" }, [
-      _c(
-        "div",
-        {
-          staticClass: "row",
-          staticStyle: { display: "flex", "align-items": "center" }
-        },
-        _vm._l(this.records, function(record) {
-          return _c("div", { staticClass: "col-xl-3 col-lg-4 col-md-6" }, [
-            _c("div", { staticClass: "item-player" }, [
-              _c("div", { staticClass: "head-player" }, [
-                record.id < 9
-                  ? _c("a", { attrs: { href: "/player/" + record.id } }, [
-                      _c("img", {
-                        staticClass: "img",
-                        attrs: {
-                          src: "img/players/" + record.player_image,
-                          alt: record.player
-                        }
-                      })
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                record.id >= 9
-                  ? _c("img", {
-                      staticClass: "img",
-                      attrs: {
-                        src: "img/players/" + record.player_image,
-                        alt: record.player
-                      }
-                    })
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "info-player" }, [
-                _c("span", { staticClass: "number-player" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(record.id) +
-                      "\n                "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("h4", [
-                  _vm._v(
-                    "\n                            " +
-                      _vm._s(record.player) +
-                      "\n                        "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("ul", [
-                  _c("li", [
-                    _c("strong", [_vm._v("NATIONALITY")]),
-                    _vm._v(" "),
-                    _c("span", [
-                      _c("img", {
-                        attrs: { src: "img/clubs-logos/colombia.png", alt: "" }
-                      }),
-                      _vm._v(" " + _vm._s(record.country) + " ")
-                    ])
-                  ]),
-                  _c("li", [
-                    _c("strong", [_vm._v("SCORE:")]),
-                    _vm._v(" "),
-                    _c("span", [_vm._v(_vm._s(record.score))])
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "li",
-                    {
-                      staticStyle: { display: "flex", "align-items": "center" }
-                    },
-                    [
-                      _c(
-                        "strong",
-                        {
-                          staticStyle: {
-                            "padding-right": "10px",
-                            display: "block"
-                          }
-                        },
-                        [_vm._v("BORN:")]
-                      ),
+    _c(
+      "div",
+      { staticClass: "container padding-top" },
+      [
+        _c("transition", { attrs: { name: "fade" } }, [
+          _c(
+            "div",
+            {
+              staticClass: "row",
+              staticStyle: { display: "flex", "align-items": "center" }
+            },
+            _vm._l(this.records, function(record, index) {
+              return _c(
+                "div",
+                { key: index, staticClass: "col-xl-3 col-lg-4 col-md-6" },
+                [
+                  _c("div", { staticClass: "item-player" }, [
+                    _c("div", { staticClass: "head-player" }, [
+                      record.id < 9
+                        ? _c("a", { attrs: { href: "/player/" + record.id } }, [
+                            _c("img", {
+                              staticClass: "img",
+                              attrs: {
+                                src: "img/players/" + record.player_image,
+                                alt: record.player
+                              }
+                            })
+                          ])
+                        : _vm._e(),
                       _vm._v(" "),
-                      _c("span", [_vm._v(_vm._s(record.born))])
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              record.id < 9
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "btn",
-                      attrs: { href: "/player/" + record.id }
-                    },
-                    [
-                      _vm._v("View Player "),
-                      _c("i", {
-                        staticClass: "fa fa-angle-right",
-                        attrs: { "aria-hidden": "true" }
-                      })
-                    ]
-                  )
-                : _vm._e()
-            ])
-          ])
-        })
-      )
-    ]),
+                      record.id >= 9
+                        ? _c("img", {
+                            staticClass: "img",
+                            attrs: {
+                              src: "img/players/" + record.player_image,
+                              alt: record.player
+                            }
+                          })
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "info-player" }, [
+                      _c("span", { staticClass: "number-player" }, [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(record.id) +
+                            "\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("h4", [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(record.player) +
+                            "\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", [
+                        _c("li", [
+                          _c("strong", [_vm._v("NATIONALITY")]),
+                          _vm._v(" "),
+                          _c("span", [
+                            _c("img", {
+                              attrs: {
+                                src: "img/flags/" + record.country_image,
+                                alt: record.country
+                              }
+                            }),
+                            _vm._v(" " + _vm._s(record.country) + " ")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("strong", [_vm._v("SCORE:")]),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(record.score))])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "li",
+                          {
+                            staticStyle: {
+                              display: "flex",
+                              "align-items": "center"
+                            }
+                          },
+                          [
+                            _c(
+                              "strong",
+                              {
+                                staticStyle: {
+                                  "padding-right": "10px",
+                                  display: "block"
+                                }
+                              },
+                              [_vm._v("BORN:")]
+                            ),
+                            _vm._v(" "),
+                            _c("span", [_vm._v(_vm._s(record.born))])
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    record.id < 9
+                      ? _c(
+                          "a",
+                          {
+                            staticClass: "btn",
+                            attrs: { href: "/player/" + record.id }
+                          },
+                          [
+                            _vm._v("View Player "),
+                            _c("i", {
+                              staticClass: "fa fa-angle-right",
+                              attrs: { "aria-hidden": "true" }
+                            })
+                          ]
+                        )
+                      : _vm._e()
+                  ])
+                ]
+              )
+            })
+          )
+        ])
+      ],
+      1
+    ),
     _vm._v(" "),
-    _vm.loading === true
+    this.loading === true
       ? _c("div", { staticClass: "lds-dual-ring" })
       : _vm._e()
   ])
