@@ -30,7 +30,7 @@
         },
         methods: {
             submit() {
-                axios.post('http://' + this.api_link, {
+                axios.post(this.api_link, {
                     description: this.description,
                     news_id: this.news_id
                 }).then(function (response) {

@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row" style="display: flex; align-items: center;">
         <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12" v-for="record in this.records">
             <div class="item-player">
                 <div class="head-player">
@@ -40,7 +40,7 @@
         },
         mounted() {
             const SELF = this;
-            axios.get('http://' + this.api_link).then(function (Response) {
+            axios.get(this.api_link).then(function (Response) {
                 SELF.records = Response.data.data;
             });
         }
