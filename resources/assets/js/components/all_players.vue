@@ -74,7 +74,7 @@
                 this.records = [];
                 this.loading = true;
                 const SELF = this;
-                axios.get('http://' + this.api_link + '/country_id').then(function (Response) {
+                axios.get(this.api_link + '/country_id').then(function (Response) {
                     SELF.records = Response.data.data;
                     SELF.loading = false;
                 });
@@ -84,7 +84,7 @@
                 this.records = [];
                 this.loading = true;
                 const SELF = this;
-                axios.get('http://' + this.api_link).then(function (Response) {
+                axios.get(this.api_link).then(function (Response) {
                     SELF.records = Response.data.data;
                     SELF.loading = false;
                 });
@@ -92,7 +92,7 @@
         },
         mounted() {
             const SELF = this;
-            axios.get('http://' + this.api_link).then(function (Response) {
+            axios.get(this.api_link).then(function (Response) {
                 SELF.records = Response.data.data;
                 SELF.loading = false;
             });
