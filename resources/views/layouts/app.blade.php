@@ -12,7 +12,7 @@
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Theme CSS -->
-    <link href="{{url('css/main.css')}}" rel="stylesheet" media="screen">
+    <link href="{{url('css/all.css')}}" rel="stylesheet" media="screen">
 
     <!-- ICON -->
     <link rel="icon" href="{{asset('img/icon.png')}}">
@@ -44,7 +44,7 @@
 
 <!-- ======================= JQuery libs =========================== -->
 <!-- Vue and others-->
-<script type="text/javascript" src="{{url('js/app.js')}}" defer></script>
+{{--<script type="text/javascript" src="{{url('js/app.js')}}" defer></script>
 <!-- jQuery local-->
 <script type="text/javascript" src="{{url('js/jquery.js')}}" defer></script>
 <!-- popper.js-->
@@ -54,7 +54,9 @@
 <!-- required-scripts.js-->
 <script type="text/javascript" src="{{url('js/theme-scripts.js')}}"defer></script>
 <!-- theme-main.js-->
-<script type="text/javascript" src="{{asset('js/theme-main.js')}}" defer></script>
+<script type="text/javascript" src="{{asset('js/theme-main.js')}}" defer></script>--}}
+
+<script type="text/javascript" src="{{asset('js/all.js')}}" defer></script>
 <!-- ======================= End JQuery libs =========================== -->
 
 </body>
