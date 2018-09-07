@@ -50,7 +50,7 @@
         },
         mounted() {
             const self = this;
-            axios.get('http://' + this.api_link).then(function(Response) {
+            axios.get(this.api_link).then(function(Response) {
                 self.records = Response.data.data;
                 self.loading = false;
             });
